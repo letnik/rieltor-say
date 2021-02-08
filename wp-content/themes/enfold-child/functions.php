@@ -166,3 +166,12 @@ function show_svg_in_media_library( $response ) {
 
 	return $response;
 }
+
+
+add_action( 'ava_after_content', 'action_function_name_2472' );
+function action_function_name_2472(){
+
+    $triggerFilter = '<div class="trigger-filter"></div>';
+	echo $triggerFilter;
+
+}
