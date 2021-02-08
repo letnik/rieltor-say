@@ -8,9 +8,59 @@
 @import 'parts/top_nav'
 @import 'parts/header'
 
+*
+  border: none !important
+  list-style: none
+  font-family: Rubik
 
-#top
-  .main_color
-    .tabcontainer
-      .active_tab_content
-        background-color: red !important
+#main
+  .card_object 
+    .contetnt_box
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      max-height: 200px
+      padding-left: 11px
+      .title_block
+        span[itemprop="streetAddress"]
+          font-style: normal
+          font-weight: 500
+          font-size: 20px
+          color: #2D2D2D
+      .price_holder
+        .geodir-field-price_2
+          font-style: normal
+          font-weight: 500
+          font-size: 25px
+      .inform_holder
+        ul
+          flex-wrap: wrap
+          justify-content: start
+          align-items: center
+          li
+            min-width: 30%
+            align-items: center
+            margin: 0
+            &::before
+                font-size: 30px
+                color: #808080
+                font-family: fontello
+                margin-right: 12px
+            &:nth-child(1) 
+              &::before
+                content: '\e80b'
+            &:nth-child(2) 
+              &::before
+                content: '\e80a'
+            &:nth-child(3) 
+              &::before
+                content: '\e80c'
+            &:nth-child(4) 
+              &::before
+                content: '\e80d'
+            &:nth-child(5) 
+              &::before
+                content: '\e80e'
+
+            
+          
