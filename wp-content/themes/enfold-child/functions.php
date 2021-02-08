@@ -39,3 +39,67 @@ function sl_tel($tel) {
 // }
 
 
+add_action( 'after_setup_theme', 'theme_register_nav_menu' );
+function theme_register_nav_menu() {
+	register_nav_menu( 'primary', 'Primary Menu' );
+}
+
+
+
+add_shortcode('avs_avia_logo', 'callback_avia_logo');
+function callback_avia_logo() {
+	$logo = avia_get_option('logo');
+	return  avia_logo($logo, '', 'strong', true);
+}
+
+add_action( 'ava_after_main_menu', 'nav_logo_custom' );
+function nav_logo_custom() {
+
+    $logo = avia_get_option('logo');
+    echo $logo;
+
+}
+
+add_action( 'ava_after_main_menu', 'nav_menu_custom' );
+function nav_menu_custom() {
+
+    
+	wp_nav_menu( array(
+        'menu_class'=>'menu-abra',
+        'theme_location'=>'primary',
+        'after'=>''
+    ) );
+}
+
+// function sl_header() {
+
+//     $languages = icl_get_languages();
+
+//     // START icl_get_languages
+
+//     $output .= '<div class="lang_sel_list">';
+//     $output .=  '<ul class="header-lng d-flex ai-center">';
+//     foreach($languages as $l){
+//       $active = $l['active'] == 1 ? ' icl-active' : '';
+//       $output .= '<li class="icl-' . $l['code'] . $active . '"><a href="'.$l['url'].'">'.$l['code'].'</a></li>';
+//     }
+//     $output .= '</ul>';
+//     $output .= '</div>';
+
+//     // END icl_get_languages
+
+//     echo $output;
+// }
+// add_action('ava_after_main_menu', 'sl_header');
+
+
+add_action('avf_logo_final_output', function() {
+    ob_start();
+	?>
+
+
+
+	<?php
+    return ob_get_clean();
+    
+});
