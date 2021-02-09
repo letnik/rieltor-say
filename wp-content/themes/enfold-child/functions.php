@@ -46,19 +46,19 @@ function theme_register_nav_menu() {
 
 
 
-add_shortcode('avs_avia_logo', 'callback_avia_logo');
-function callback_avia_logo() {
-	$logo = avia_get_option('logo');
-	return  avia_logo($logo, '', 'strong', true);
-}
+// add_shortcode('avs_avia_logo', 'callback_avia_logo');
+// function callback_avia_logo() {
+// 	$logo = avia_get_option('logo');
+// 	return  avia_logo($logo, '', 'strong', true);
+// }
 
-add_action( 'ava_after_main_menu', 'nav_logo_custom' );
-function nav_logo_custom() {
+// add_action( 'ava_after_main_menu', 'nav_logo_custom' );
+// function nav_logo_custom() {
 
-    $logo = avia_get_option('logo');
-    echo $logo;
+//     $logo = avia_get_option('logo');
+//     echo $logo;
 
-}
+// }
 
 add_action( 'ava_after_main_menu', 'nav_menu_custom' );
 function nav_menu_custom() {
@@ -71,80 +71,6 @@ function nav_menu_custom() {
     ) );
 }
 
-// function sl_header() {
-
-//     $languages = icl_get_languages();
-
-//     // START icl_get_languages
-
-//     $output .= '<div class="lang_sel_list">';
-//     $output .=  '<ul class="header-lng d-flex ai-center">';
-//     foreach($languages as $l){
-//       $active = $l['active'] == 1 ? ' icl-active' : '';
-//       $output .= '<li class="icl-' . $l['code'] . $active . '"><a href="'.$l['url'].'">'.$l['code'].'</a></li>';
-//     }
-//     $output .= '</ul>';
-//     $output .= '</div>';
-
-//     // END icl_get_languages
-
-//     echo $output;
-// }
-// add_action('ava_after_main_menu', 'sl_header');
-
-
-add_action('avf_logo_final_output', function() {
-    ob_start();
-	?>
-
-
-
-	<?php
-    return ob_get_clean();
-    
-});
-
-
-
-// Дозволяєм завантаження SVG
-function my_myme_types($mime_types){
-    $mime_types['svg'] = 'image/svg+xml'; // поддержка SVG
-    return $mime_types;
-}
-add_filter('upload_mimes', 'my_myme_types', 1, 1);
-
-
-
-add_filter( 'wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5 );
-
-# Исправление MIME типа для SVG файлов.
-function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
-
-	// WP 5.1 +
-	if( version_compare( $GLOBALS['wp_version'], '5.1.0', '>=' ) )
-		$dosvg = in_array( $real_mime, [ 'image/svg', 'image/svg+xml' ] );
-	else
-		$dosvg = ( '.svg' === strtolower( substr($filename, -4) ) );
-
-	// mime тип был обнулен, поправим его
-	// а также проверим право пользователя
-	if( $dosvg ){
-
-		// разрешим
-		if( current_user_can('manage_options') ){
-
-			$data['ext']  = 'svg';
-			$data['type'] = 'image/svg+xml';
-		}
-		// запретим
-		else {
-			$data['ext'] = $type_and_ext['type'] = false;
-		}
-
-	}
-
-	return $data;
-}
 
 
 
