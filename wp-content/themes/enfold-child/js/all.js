@@ -1,33 +1,5 @@
 jQuery(document).ready(function () {
 
-	// $('.ads-category-item').on('click', function() {
-  
-	//   var subcategoryId = $(this).data('subcategoryId');
-	// 	id = document.getElementById(subcategoryId);
-  
-	//   if ( $(id).hasClass('active') ){
-	// 	  $('.ads-subcategory').removeClass('active');
-  
-	// 	} else {
-	// 	  $('.ads-subcategory').removeClass('active');
-	// 	  $(id).toggleClass('active');
-	//   };
-	//   if ( $(this).hasClass('active') ){
-	// 	  $('.ads-category-item').removeClass('active');
-  
-	// 	} else {
-	// 	  $('.ads-category-item').removeClass('active');
-	// 	  $(this).toggleClass('active');
-  
-	//   };
-	//   if ($(window).width() <= 576) {
-	// 	$('.ads-category-item').addClass('d-none');
-	// 	$('.ads-category-item').removeClass('active');
-	//   }
-  
-  
-	// });
-
 	jQuery('.geodir-filter-cat').on('click', function() {
 
 		if ( jQuery(this).hasClass('is-open') ){
@@ -57,15 +29,7 @@ jQuery(document).ready(function () {
 	});
 });
 
-
-// // провіряєм checkbox
-// const checkbox = document.querySelector('.geodir-filter-cat li input');
-
-// checkbox.addEventListener('change', function () {
-//     if ( this.checked ) {
-//         jQuery(this).fadeOut();
-//     } else console.log('unchecked');
-// })
+// провіряєм чекбокс у фільтрі
 jQuery(document).ready(function () {
 
 	jQuery('.geodir-filter-cat li input[type=checkbox]').each(function () {
