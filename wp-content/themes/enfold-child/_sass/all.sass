@@ -8,6 +8,8 @@
 @import 'parts/top_nav'
 @import 'parts/header'
 
+@import 'parts/filter'
+
 *
   border: none !important
   list-style: none
@@ -20,7 +22,7 @@
       display: flex
       flex-direction: column
       justify-content: space-between
-      max-height: 200px
+      align-items: stretch
       padding-left: 11px
       .title_block
         span[itemprop="streetAddress"]
@@ -38,10 +40,12 @@
           flex-wrap: wrap
           justify-content: start
           align-items: center
+          margin: 0
           li
-            min-width: 30%
+            min-width: 33.3%
             align-items: center
             margin: 0
+            // margin-right: auto;
             &::before
                 font-size: 30px
                 color: #808080
@@ -63,9 +67,26 @@
               &::before
                 content: '\e80e'
 
-            
-          
 
+#main
+  .card_object 
+    .image_box
+      min-width: 330px
+      width: 330px;
+      .geodir-image-wrapper.geodir_flexslider.geodir-slider
+        position: relative;
+        .geodir-control-nav.geodir-control-paging
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+        .geodir-direction-nav
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+
+            
 #top
   .main_color
     .tabcontainer
@@ -73,48 +94,51 @@
         background-color: red !important
 
 
-.custom-search-form-style
-  position: relative;
-  .geodir-filter-container
-    .geodir-filter-cat
-      min-width: auto
-      width: auto;
-      margin-right: 20px;
-      flex: inherit !important
-      z-index: 110
-      > ul
-        position: absolute;
-        width: 250px;
-        background: #ccc;
-        padding: 10px !important;
-        display: none;
-        z-index: 110;
 
-      > span
-        display: inline-block
-        padding: 5px 15px;
-        border-radius: 100px
-        border: 1px solid #555 !important
-        cursor: pointer;
-        &:hover, &.is-open
-          background: #555;
-          color: #fff  
-      &.is-open
-        > ul
-
-
+#top
+  ul#avia-menu
+    li
+      margin: 10px auto;
+      a 
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding: 10px;
+        border-radius: 0px 18px 18px 0px;
+        transition: all .4s 
+        span>i
+          display: none
+        &:hover
+          background: #2D2D2D
+          &::before
+            color: #fff
+          
+        .avia-menu-text
+          font-style: normal;
+          font-weight: 1;
+          font-size: 18px;
+          line-height: 22px
+          margin-bottom: 5px;
+        &::before
+          font-family: fontello
+          font-size: 40px;
+          color: #000;
+          line-height: 44px;
+          transition: all .4s 
         
-    .customize_filter_inner
-      > .clearfix
+  
 
-.trigger-filter
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  // background: rgba(0,0,0,.3);
-  z-index: 100;
-  display: none;
+
+#menu-item-171 a
+  &::before
+    content: '\e802'
+
+#menu-item-172 a
+  &::before
+    content: '\e803'
+
+#menu-item-173 a
+  &::before
+    content: '\e804'
+

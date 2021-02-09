@@ -1,0 +1,56 @@
+@import 'parts/variables'
+
+
+.custom-search-form-style
+
+  position: relative;
+  .geodir-filter-container
+    .geodir-filter-cat
+      min-width: auto
+      width: auto;
+      margin-right: 20px;
+      flex: inherit !important
+      z-index: 110
+      > ul
+        position: absolute;
+        width: 250px;
+        background: #ccc;
+        padding: 10px !important;
+        display: none;
+        z-index: 110;
+
+      > span
+        display: inline-block
+        padding: 5px 15px;
+        border-radius: 100px
+        border: 1px solid #555 !important
+        cursor: pointer;
+        &:hover, &.is-open
+          background: #555;
+          color: #fff  
+      &.is-open
+        > ul
+
+
+        
+    .customize_filter_inner
+      > .clearfix
+
+.trigger-filter
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  // background: rgba(0,0,0,.3);
+  z-index: 100;
+  display: none;
+
+  .geodir-filter-cat
+    > ul
+      position: absolute;
+
+
+

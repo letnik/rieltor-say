@@ -57,3 +57,28 @@ jQuery(document).ready(function () {
 	});
 });
 
+
+// // провіряєм checkbox
+// const checkbox = document.querySelector('.geodir-filter-cat li input');
+
+// checkbox.addEventListener('change', function () {
+//     if ( this.checked ) {
+//         jQuery(this).fadeOut();
+//     } else console.log('unchecked');
+// })
+jQuery(document).ready(function () {
+
+	jQuery('.geodir-filter-cat li input[type=checkbox]').each(function () {
+		if (jQuery(this).prop('checked')) {
+			jQuery(this).parent().addClass( "checked" );
+		} else {
+			jQuery(this).parent().removeClass( "checked" );
+		}
+	});
+
+	jQuery(":checkbox").change(function () {
+		jQuery(this).parent().toggleClass('checked');
+	});
+	
+});
+
