@@ -83,3 +83,11 @@ function action_function_name_2472(){
 
 }
 
+
+// тест
+
+add_action( 'wp_footer', 'account_wiget' );
+function account_wiget() {
+	echo '[uwp_login logged_in_show="simple"]';
+}
+
