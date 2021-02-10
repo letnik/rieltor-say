@@ -83,10 +83,16 @@ function action_function_name_2472(){
 }
 
 
-// тест
+// // тест
 
-add_action( 'wp_footer', 'account_wiget' );
-function account_wiget() {
-	echo '[uwp_login logged_in_show="simple"]';
+
+add_action( 'ava_after_main_container', 'users_primary_menu' );
+function users_primary_menu() {
+
+    wp_nav_menu( array(
+        'menu_class'=>'menu-abra',
+        'theme_location'=>'primary',
+        'after'=>''
+    ) );
 }
 

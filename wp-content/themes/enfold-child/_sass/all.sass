@@ -3,12 +3,54 @@
 @import 'parts/display'
 @import 'parts/layout'
 @import 'parts/hardcore'
-// @import 'fonts'
+
 
 @import 'parts/_navs'
 @import 'parts/filter'
 @import 'parts/gd_arhiv'
 @import 'parts/gd_arhiv_item'
+
+// @import 'fonts'
+
+
+
+.menu-user_menu-container
+  #menu-user_menu-1.menu-abra
+    display: flex
+    justify-content: flex-end
+    background: grey;
+    padding: 0 30px 0 0;
+    margin: 0;
+    li.users-wp-menu 
+      position: relative;
+      padding: 10px;
+      .sub-menu
+        position: absolute;
+        z-index: -5;
+        display: none;
+        background: grey;
+        right: 0;
+        top: 100%;
+        margin: 0;
+        li
+          padding: 10px;
+          margin: 0;
+      &:hover
+        .sub-menu
+          z-index: 5;
+          display: block;
+
+
+
+
+
+
+
+
+
+
+
+          
 
 
 
