@@ -14,6 +14,7 @@ add_filter('show_admin_bar', '__return_false');
 function sl_add_scripts()
 {
     //Custom JS
+    // wp_enqueue_script('sticky', get_stylesheet_directory_uri() . '/js/hc-sticky.js', array('jquery'), null, true );
     wp_enqueue_script('all', get_stylesheet_directory_uri() . '/js/all.js', array('jquery'), null, true );
 
     wp_enqueue_style('all', get_stylesheet_directory_uri() . '/css/all.css', [], null);
