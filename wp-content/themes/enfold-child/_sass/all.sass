@@ -12,6 +12,11 @@
 
 // @import 'fonts'
 
+*
+  &:active,&:focus
+    outline: none !important
+    border: none !important
+
 
 
 .menu-user_menu-container
@@ -41,6 +46,32 @@
           display: block;
 
 
+// search tab
+
+.js_active
+  .top_tab
+    .tab_titles
+      border-radius: 18px 18px 0px 0px;
+      .tab
+        background: #2D2D2D;
+        text-align: center;
+        top: 0 !important
+        &.active_tab
+          background:#F0F0F0
+
+
+.custom-search-form-style .geodir-filter-container .geodir-filter-cat>span
+  border: none !important
+  
+  font-weight: 1;
+  font-size: 16px;
+  line-height: 19px;
+  &:hover
+    color: #000
+    background:#F0F0F0
+
+.gd-field-property_bedrooms, .gd-field-property_type, .gd-field-type_of_bilding, .gd-field-price_2
+  border: none
 
 
 
