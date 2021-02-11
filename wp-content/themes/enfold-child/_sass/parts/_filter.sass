@@ -21,7 +21,7 @@
                     display: inline-block
                     padding: 5px 10px
                     border-radius: 18px
-                    border: 1px solid #555 !important
+                    // border: 1px solid #555 !important
                     margin-right: 10px
                     margin-bottom: 10px
                     position: relative
@@ -37,7 +37,7 @@
                         right: 0
                         bottom: 0
                         margin: 0
-                        border-radius: 18px
+                        border-radius: 12px
                         cursor: pointer
                         opacity: 0
 
@@ -49,26 +49,52 @@
 
             > span
                 display: inline-block
+
                 padding: 5px 15px
                 border-radius: 100px
-                border: 1px solid #555 !important
+                // border: 1px solid #555 !important
                 cursor: pointer
                 &:hover, &.is-open
-                    background: #555
+                    background: #2d2d2d
                     color: #fff  
                 &.is-open
                     > ul
 
+
             &.gd-field-post_category
                 position: absolute
                 top: -90px
+                > span
+                    border: none
                 > ul
                     width: 100%
                     position: relative
                     background: none
                     padding: 10px !important
-                    display: block !important
+                    display: flex !important
                     z-index: 110
+                    li
+                        display: flex;
+                        &::before
+                            content: ''
+                            display: block;
+                            text-align: center;
+                            width: 20px;
+                            height: 20px;
+                            background: #F87866;
+                            color: #fff
+                            margin-right: 7px;
+                            border-radius: 50px
+                        &.checked
+                            &::before
+                                content: '✔'
+
+
+
+
+
+
+
 .trigger-filter
     width: 100%
     height: 100%
@@ -95,13 +121,17 @@
                     line-height: 21px
                     display: flex;
                     align-items: center;
-                    padding: 20px 
+                    padding: 20px
+                    background: #2D2D2D
+                    color: grey
                     .tab_icon
                         display: none
+                    &:hover
+                        color: #fff
                     &::before
                         font-family: fontello
                         font-size: 40px
-                        color: #000
+                        color: #fff
                         display: block;
                         height: 30px;
                         margin-right: 15px;
@@ -115,18 +145,12 @@
                         &::before
                             content: '\e804'
                     &.active_tab
-                        background: #2D2D2D;
-                        color: #fff
+                        background: #F0F0F0;
+                        color: #000
                         &::before
                             font-weight: normal;
-                            color: #fff
-                        
- 
-
-
-            .tab:first-child
-                border-top-left-radius: 18px
-            .tab:last-child
-                border-top-right-radius: 18px
-
-#top  .tabcontainer .tab.active_tab
+                            color: #000
+                .tab:first-child
+                    border-top-left-radius: 18px
+                .tab:last-child
+                    border-top-right-radius: 18px
