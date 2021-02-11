@@ -64,12 +64,12 @@ function theme_register_nav_menu() {
 add_action( 'ava_after_main_menu', 'nav_menu_custom' );
 function nav_menu_custom() {
 
-    
 	wp_nav_menu( array(
         'menu_class'=>'menu-abra',
         'theme_location'=>'primary',
         'after'=>''
     ) );
+
 }
 
 
@@ -90,10 +90,20 @@ function action_function_name_2472(){
 add_action( 'ava_after_main_container', 'users_primary_menu' );
 function users_primary_menu() {
 
+    echo '<div id="top-menu-custom" class="top-menu-custom">';
+
     wp_nav_menu( array(
         'menu_class'=>'menu-abra',
         'theme_location'=>'primary',
         'after'=>''
     ) );
-}
 
+    echo '</div>';
+    echo '<div id="yoast_breadcrumb-custom" class="yoast_breadcrumb-custom">';
+
+    if ( function_exists('yoast_breadcrumb') ) {
+        yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+        }
+
+    echo '</div>';
+}
