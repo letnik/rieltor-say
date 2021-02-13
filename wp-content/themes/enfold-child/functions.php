@@ -99,11 +99,18 @@ function users_primary_menu() {
     ) );
 
     echo '</div>';
-    echo '<div id="yoast_breadcrumb-custom" class="yoast_breadcrumb-custom">';
 
-    if ( function_exists('yoast_breadcrumb') ) {
-        yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-        }
-
-    echo '</div>';
 }
+
+// add_shortcode( 'show_breadcrumbs', 'shortcode_breadcrumbs' );
+
+// function shortcode_breadcrumbs() {
+
+//     echo '<div id="yoast_breadcrumb-custom" class="yoast_breadcrumb-custom">';
+
+//     if ( function_exists('yoast_breadcrumb') ) {
+//         yoast_breadcrumb( '<div id="breadcrumbs">','</div>' );
+//         }
+
+//     echo '</div>';
+// }

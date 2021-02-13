@@ -49,3 +49,45 @@ jQuery(document).ready(function () {
 	
 });
 
+
+
+
+jQuery(document).ready(function(){
+
+
+	// var senseSpeed = 50;
+	// var previousScroll = 100;
+
+	// jQuery(window).scroll(function(event){
+	//    	var scroller = jQuery(this).scrollTop();
+	//   	if (scroller > previousScroll){
+	// 		jQuery('.sticker-map-container .list .tabcontainer').removeClass('sticky');
+	//    	} else if (scroller+senseSpeed < previousScroll) {
+	// 		jQuery('.sticker-map-container .list .tabcontainer').addClass('sticky');
+	//    	}
+	//    previousScroll = scroller;
+	// });
+
+
+
+
+	
+	
+
+
+
+
+
+
+	// jQuery(window).scroll(function() {
+	//   winPos = jQuery(window).scrollTop();
+	//   if (winPos >= 400) {
+	// 	jQuery('.sticker-map-container .list .tabcontainer').addClass('sticky');
+	//   }
+	//   else {
+	// 	jQuery('.sticker-map-container .list .tabcontainer').removeClass('sticky');
+	//   }
+	// });
+  
+});
+  

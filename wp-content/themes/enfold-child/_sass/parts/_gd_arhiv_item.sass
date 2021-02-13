@@ -8,7 +8,8 @@
       flex-direction: column
       justify-content: space-between
       align-items: stretch
-      padding-left: 11px
+      padding-left: 30px
+      width: 100%;
       .title_block
         span[itemprop="streetAddress"]
           font-style: normal
@@ -56,8 +57,10 @@
 #main
   .card_object 
     .image_box
-      min-width: 330px
-      width: 330px
+      min-width: 250px
+      width: 250px
+      border-radius: 18px;
+      overflow: hidden;
       .geodir-image-wrapper.geodir_flexslider.geodir-slider
         position: relative
         .geodir-control-nav.geodir-control-paging
@@ -71,9 +74,11 @@
           top: 0
           left: 0
 
-            
+  .geodir_flex-container  
+    margin: 0;  
 
-
+body ul.geodir-category-list-view>li
+  margin-top: 30px !important;
 
 
 
