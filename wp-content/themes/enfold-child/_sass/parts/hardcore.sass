@@ -6,12 +6,16 @@
 //     //    .flex_cell_inner
 //     //        height: 100%;
 
+// body
+//     font-family: 'rubik' !important
+//     *
+//         font-family: 'rubik' !important
 .sticker-map-container
     display: grid;
     grid-template-columns: 50% 50%
 
 
-.sticker-map
+.sticker-map, .sticker-tabs
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -42,7 +46,6 @@ html.responsive, .responsive body, #wrap_all
 .sticker-map-container
     .list
         padding: 0 30px;
-        overflow-x: hidden;
     .tabcontainer
         transition: all .3s
         // position: static;
@@ -59,5 +62,38 @@ html.responsive, .responsive body, #wrap_all
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); 
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 
-.tabcontainer 
-    padding: 30px 0;
+.custom-tabs-form
+    .tabcontainer 
+        padding: 30px 0;
+        // overflow-x: hidden;
+        overflow: visible
+
+.lity.lity-image
+    display: none !important
+
+.custom-top-fix 
+    .list, .sticker-tabs, .sticker-map
+        margin-top: -1px !important
+
+#scroll-top-link ,#scroll-top-link.avia_pop_class, #av-cookie-consent-badge.avia_pop_class
+    right: calc(50% - 20px) !important
+    bottom: 30px !important
+    background-color: #808080;
+    color: #fff;
+    &:hover
+        background-color: #808080;
+        opacity: 1;
+        color: #ebebeb
+
+.geodir-loop-container
+    .geodir_post_meta_icon
+        i
+            display: none
+
+
+
+
+// icon
+.geodir-field
+    &-property_bedrooms
+

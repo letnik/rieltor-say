@@ -5,37 +5,37 @@
   ul#avia-menu
     li
       margin: 0
-      &:nth-child(1)
-        a 
-          &::before
-            content: '\e802'
-      &:nth-child(2)
-        a 
-          &::before
-            content: '\e803'
-      &:nth-child(3)
-        a 
-          &::before
-            content: '\e804'
+      // &:nth-child(1)
+      //   a 
+      //     &::before
+      //       content: '\e802'
+      // &:nth-child(2)
+      //   a 
+      //     &::before
+      //       content: '\e803'
+      // &:nth-child(3)
+      //   a 
+      //     &::before
+      //       content: '\e804'
       a 
         display: flex
         justify-content: center
         align-items: center
         flex-direction: column
         padding: 10px
-        border-radius: 0px 18px 18px 0px
-        transition: all .4s 
-        span>i
+        // border-radius: 0px 18px 18px 0px
+        // transition: all .4s 
+        span > i
           display: none
         // &:hover
         //   background: #2D2D2D
         //   &::before
         //     color: #fff
-        .avia-menu-text
-          font-style: normal
-          font-size: 18px
-          line-height: 22px
-          margin-bottom: 5px
+        // .avia-menu-text
+        //   font-style: normal
+        //   font-size: 18px
+        //   line-height: 22px
+        //   margin-bottom: 5px
         &::before
           font-family: fontello
           font-size: 40px
@@ -87,7 +87,26 @@
           a 
             padding: 0
             margin: 0 auto
+    .menu-image-hover-wrapper
+      position: relative
+      display: block
+      margin-bottom: 10px
+      max-width: 45px
+      width: 45px
+      height: 45px
+      margin: 0 auto 10px
+      .hovered-image
+        position: absolute
+        left: 0
+        top: 0
+        margin-left: 0 !important
+    .menu-image-title
+      font-weight: 500
+      font-size: 18px
 
+  #avia-menu  
+    li
+      margin-bottom: 15px
 
 #top  
   .av-main-nav-wrap
@@ -95,7 +114,47 @@
       li
         a 
           &::before
-            font-weight: normal;
-    
+            font-weight: normal
+  .menu-image-title-before.menu-image-not-hovered img, .menu-image-hovered.menu-image-title-before .menu-image-hover-wrapper, .menu-image-title-after.menu-image-title
+    padding-left: 0
+    text-align: center
 .html_header_sidebar #top .logo
-  padding: 10px;
+  padding: 10px
+
+
+
+
+  
+#dark_mode 
+  position: relative
+  appearance: none
+  outline: none
+  width: 80px
+  height: 40px
+  border-radius: 20px
+  background: #c3c3c3
+  box-shadow: none
+  cursor: pointer
+  overflow: hidden
+  transition: 0.3s
+  display: block !important
+
+
+#dark_mode:checked 
+  background: #8000c9
+
+
+#dark_mode::after
+  content: ''
+  position: absolute
+  top: 2px
+  left: 2px
+  border-radius: inherit
+  width: 36px
+  height: 36px
+  background: #ffffff
+  transition: inherit
+
+#dark_mode:checked::after 
+  left: calc(100% - 38px)
+  background: #303030

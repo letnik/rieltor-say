@@ -91,3 +91,8 @@ jQuery(document).ready(function(){
   
 });
   
+jQuery(document).ready(function(){
+	document.querySelector("#checkbox").addEventListener("change", () => {
+		document.body.classList.toggle("dark");
+	});
+});

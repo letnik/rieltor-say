@@ -4,6 +4,7 @@
 #main
   .card_object 
     .contetnt_box
+      position: relative
       display: flex
       flex-direction: column
       justify-content: space-between
@@ -18,9 +19,10 @@
           color: #2D2D2D
       .price_holder
         .geodir-field-price_2
-          font-style: normal
-          font-weight: 500
-          font-size: 25px
+          font-style: normal;
+          font-weight: 500;
+          font-size: 25px;
+          line-height: 30px;
       .inform_holder
         ul
           flex-wrap: wrap
@@ -37,23 +39,33 @@
                 color: #808080
                 font-family: fontello
                 margin-right: 12px
-            &:nth-child(1) 
-              &::before
-                content: '\e80b'
-            &:nth-child(2) 
-              &::before
-                content: '\e80a'
-            &:nth-child(3) 
-              &::before
-                content: '\e80c'
-            &:nth-child(4) 
-              &::before
-                content: '\e80d'
-            &:nth-child(5) 
-              &::before
-                content: '\e80e'
+            // &:nth-child(1) 
+            //   &::before
+            //     content: '\e80b'
+            // &:nth-child(2) 
+            //   &::before
+            //     content: '\e80a'
+            // &:nth-child(3) 
+            //   &::before
+            //     content: '\e80c'
+            // &:nth-child(4) 
+            //   &::before
+            //     content: '\e80d'
+            // &:nth-child(5) 
+            //   &::before
+            //     content: '\e80e'
 
+      .favorites, .distance
+        position: absolute
+        right: 0
+      .favorites
+        top: 0
+      .distance
+        bottom: 0
 
+  .custom_gd_loop_wrap
+    .gd_place
+      border-top: 1px solid #ccc !important
 #main
   .card_object 
     .image_box
