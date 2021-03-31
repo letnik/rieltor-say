@@ -21,64 +21,121 @@
         .geodir-loc-bar
             margin: 0;
             padding: 0;
-            margin-top: 40px;
-        .geodir-loc-bar-in
-            background: none
-            padding: 0;
-        .geodir-more-filters
-            padding: 0;
-            margin: 0;
-            background: none
+// // <<<<<<< HEAD
+//             margin-top: 40px;
+//         .geodir-loc-bar-in
+//             background: none
+//             padding: 0;
+//         .geodir-more-filters
+//             padding: 0;
+//             margin: 0;
+//             background: none
 
-        .geodir-filter-container
-            .geodir-advance-search
-                display: none !important
-            .geodir-filter-cat
-                padding: 0;
-                min-width: auto
-                width: auto
-                margin: 15px 20px 5px 5px
-                flex: inherit !important
+//         .geodir-filter-container
+//             .geodir-advance-search
+//                 display: none !important
+//             .geodir-filter-cat
+//                 padding: 0;
+//                 min-width: auto
+//                 width: auto
+//                 margin: 15px 20px 5px 5px
+//                 flex: inherit !important
+//                 z-index: 110
+//                 > ul
+//                     position: absolute
+//                     width: 250px
+//                     background: #ccc
+//                     padding: 10px !important
+//                     display: none
+//                     z-index: 110
+//                     li
+//                         display: inline-block
+//                         padding: 5px 10px
+//                         border-radius: 18px
+//                         // border: 1px solid #555 !important
+//                         margin-right: 10px
+//                         margin-bottom: 10px
+//                         position: relative
+//                         overflow: hidden
+//                         input
+//                             position: absolute
+//                             display: block
+//                             width: 100%
+//                             height: 100%
+//                             z-index: 10
+//                             left: 0
+//                             top: 0
+//                             right: 0
+//                             bottom: 0
+//                             margin: 0
+//                             border-radius: 12px
+//                             cursor: pointer
+//                             opacity: 0
+// =======
+            min-width: auto
+            width: auto
+            margin: 15px 20px 5px 5px
+            flex: inherit !important
+            z-index: 110
+            > ul
+                position: absolute
+                width: 250px
+                background: #eee
+                padding: 20px !important
+                display: none
                 z-index: 110
-                > ul
-                    position: absolute
-                    width: 250px
-                    background: #ccc
-                    padding: 10px !important
-                    display: none
-                    z-index: 110
-                    li
-                        display: inline-block
-                        padding: 5px 10px
-                        border-radius: 18px
-                        // border: 1px solid #555 !important
-                        margin-right: 10px
-                        margin-bottom: 10px
-                        position: relative
-                        overflow: hidden
-                        input
-                            position: absolute
-                            display: block
-                            width: 100%
-                            height: 100%
-                            z-index: 10
-                            left: 0
-                            top: 0
-                            right: 0
-                            bottom: 0
-                            margin: 0
-                            border-radius: 12px
-                            cursor: pointer
-                            opacity: 0
-
-                        &.checked
-                            background: #555
-                            color: #fff  
-
-
-
-                > span
+                box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+                border-radius: 18px;
+                li
                     display: inline-block
+                    padding: 5px 10px
+                    border-radius: 12px
+                    // border: 1px solid #555 !important
+                    margin-right: 10px
+                    margin-bottom: 10px
+                    position: relative
+                    overflow: hidden
+                    input
+                        position: absolute
+                        display: block
+                        width: 100%
+                        height: 100%
+                        z-index: 10
+                        left: 0
+                        top: 0
+                        right: 0
+                        bottom: 0
+                        margin: 0
+                        border-radius: 12px
+                        cursor: pointer
+                        opacity: 0
+
+                    &.checked
+                        background: #2D2D2D
+                        color: #fff  
+                        
+// >>>>>>> db6f0ee6f479cf532cc253442741b28228f73c8e
+
+                        // &.checked
+                        //     background: #555
+                        //     color: #fff  
+
+
+
+            > span
+                display: inline-block
+                padding: 5px 15px
+                border-radius: 100px
+                
+                cursor: pointer
+                &:hover, &.is-open
+                    background: #2d2d2d
+                    color: #fff  
+                    
+                &.is-open
+                    border: 1px solid #555 !important
+                    > ul
+
 
                     padding: 5px 15px
                     border-radius: 100px
