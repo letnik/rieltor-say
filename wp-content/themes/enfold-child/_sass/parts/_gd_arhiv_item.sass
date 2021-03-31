@@ -70,11 +70,14 @@
   .card_object 
     .image_box
       min-width: 250px
-      width: 250px
+      width: 100%
       border-radius: 18px;
       overflow: hidden;
       .geodir-image-wrapper.geodir_flexslider.geodir-slider
         position: relative
+        height: 200px
+        .geodir-active-slide
+          height: 100%
         .geodir-control-nav.geodir-control-paging
           position: absolute
           bottom: 0
@@ -93,6 +96,24 @@ body ul.geodir-category-list-view>li
   margin-top: 30px !important;
 
 
+// #top
+//   .geodir-category-list-view
+//     .card_object
+//       justify-content: space-between
+//       .image_box
+//         width: 38%
+//       .contetnt_box
+//         width: 60%
+//         .title_block
+//           .address
+//             flex-direction: column
+//             br
+//               display: none
+//         .inform_holder
+//           .inform_list 
+//             .inform_list 
+//               flex-wrap: wrap
+//               .inform_item
 
 
 
