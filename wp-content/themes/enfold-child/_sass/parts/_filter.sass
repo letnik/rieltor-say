@@ -3,99 +3,191 @@
 #top .custom-tabs-form form
     margin-bottom: 0
 
-.custom-tabs-form
-    position: relative
-    .tabcontainer 
-        // overflow: visible;
-        .active_tab_content, .tab_content
-            background: #F0F0F0;
-            box-shadow: 0px 4px 10px rgba(145, 145, 145, 0.25);
-            border-radius: 18px;
-            padding: 25px;
-            overflow: visible;
-            left: 0 !important
-        .gd-search-field-search
-            display: none;
-        .tab_inner_content
-            margin: 0;
-        .geodir-loc-bar
-            margin: 0;
-            padding: 0;
-            margin-top: 40px;
-        .geodir-loc-bar-in
-            background: none
-            padding: 0;
-        .geodir-more-filters
-            padding: 0;
-            margin: 0;
-            background: none
-
-        .geodir-filter-container
-            .geodir-advance-search
-                display: none !important
-            .geodir-filter-cat
+#top
+    .custom-tabs-form
+        position: relative
+        .tabcontainer 
+            // overflow: visible;
+            .active_tab_content, .tab_content
+                background: #F0F0F0;
+                box-shadow: 0px 4px 10px rgba(145, 145, 145, 0.25);
+                border-radius: 10px;
+                padding: 35px 25px;
+                overflow: visible;
+                left: 0 !important
+            .gd-search-field-search, .gd-search-field-cpt
+                display: none;
+            .tab_inner_content
+                margin: 0;
+            .geodir-loc-bar
+                margin: 0;
                 padding: 0;
-                min-width: auto
-                width: auto
-                margin: 15px 20px 5px 5px
-                flex: inherit !important
-                z-index: 110
-                > ul
-                    position: absolute
-                    width: 250px
-                    background: #ccc
-                    padding: 10px !important
-                    display: none
-                    z-index: 110
-                    li
-                        display: inline-block
-                        padding: 5px 10px
-                        border-radius: 18px
-                        // border: 1px solid #555 !important
-                        margin-right: 10px
-                        margin-bottom: 10px
-                        position: relative
-                        overflow: hidden
+                margin-top: 55px;
+            .geodir-loc-bar-in
+                background: none
+                padding: 0;
+                > .geodir-search
+                    .gd-search-field-near
+                        width: 100% 
+                        line-height: 0
+                        display: flex
+                        align-items: center
                         input
-                            position: absolute
+                            padding: 15px 11px 15px 40px !important
+                            height: auto
+                            font-weight: 300;
+                            font-size: 15px;
+                            line-height: 17px;
+                            border-radius: 10px
+                            color: $text-grey
+                        span
+                            top: auto
+                            left: 11px
+                            i
+                                color: $text-grey
+                                font-size: 25px
+
+                    .geodir_submit_search
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+                        right: 8px
+                        padding: 12px 30px
+                        margin: 0 !important
+                        background: $accent
+                        color: #fff
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 18px
+                        display: flex
+                        align-items: center
+                        border-radius: 10px
+                        outline: none
+                        &::after
+                            content: ''
                             display: block
-                            width: 100%
-                            height: 100%
-                            z-index: 10
-                            left: 0
-                            top: 0
+                            height: 24px
+                            width: 28px
+                            margin-left: 8px
+                            background: url(../img/svg/arrow_right.svg) no-repeat center center / contain
+                        > span
+                            display: none
+
+            .geodir-more-filters
+                padding: 0;
+                margin: 0;
+                background: none
+                width: calc(100% - 2px)
+                padding-top: 20px
+
+            .geodir-filter-container
+                .geodir-advance-search
+                    display: none !important
+                .geodir-filter-cat
+                    padding: 0;
+                    min-width: auto
+                    z-index: 110
+                    margin: 0
+                    width: 20%
+                    transition: $transition
+                    border: none !important
+                    border-radius: 0
+                    &.gd-field-property_bedrooms
+                        span
+                            border-radius: 10px 0 0 10px
+                    &.gd-field-distance
+                        span
+                            border-radius: 0 10px 10px 0 
+                            
+                    > ul
+                        position: absolute
+                        left: 50%
+                        display: flex !important
+                        flex-wrap: wrap
+                        justify-content: start
+                        // min-width: 250px
+                        width: 98%
+                        // max-width: 400px
+                        background: #fff
+                        padding: 10px !important
+                        border-radius: 10px
+                        z-index: 110
+                        visibility: hidden;
+                        transform: translate(-50%, 0)
+                        border-radius: 0 0 10px 10px
+                        li
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            min-width: 30px
+                            min-height: 30px
+                            margin: 5px
+                            padding: 10px
+                            border-radius: 50px 
+                            border: solid 1px $accent !important
+                            font-size: 15px
+                            line-height: 0
+                            font-weight: 500
+                            position: relative
+                            overflow: hidden
+                            input
+                                position: absolute
+                                // display: block
+                                width: 100%
+                                height: 100%
+                                z-index: 10
+                                left: 0
+                                top: 0
+                                right: 0
+                                bottom: 0
+                                margin: 0
+                                border-radius: 10px
+                                cursor: pointer
+                                opacity: 0
+                                color: $accent
+                            &.checked
+                                background: $accent
+                                color: #fff
+
+
+
+                    > span
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        background: #fff
+                        padding: 13px 5px
+                        border-radius: 0
+                        cursor: pointer
+                        position: relative
+                        &:hover, &.is-open
+                            background: #2d2d2d
+                            color: #fff 
+                            &::after
+                                display: none
+                        &::after
+                            content: ''
+                            display: block
+                            width: 2px
+                            height: 65% 
+                            background: #F0F0F0
+                            position: absolute
                             right: 0
-                            bottom: 0
-                            margin: 0
-                            border-radius: 12px
-                            cursor: pointer
-                            opacity: 0
-
-                        &.checked
-                            background: #555
-                            color: #fff  
-
-
-
-                > span
-                    display: inline-block
-
-                    padding: 5px 15px
-                    border-radius: 100px
-                    border: 1px solid #555 !important
-                    cursor: pointer
-                    &:hover, &.is-open
-                        background: #2d2d2d
-                        color: #fff  
+                        &:nth-last-child()
+                            &::after
+                                display: none
+                            
                     &.is-open
                         > ul
+                            visibility: visible;
 
 
-                &.gd-field-post_category
+                .geodir-filter-cat.gd-field-post_category
                     position: absolute
-                    top: -35px
+                    top: -45px
                     left: 5px;
                     margin: 0;
+                    width: auto
                     > span
                         border: none
                         display: none !important
@@ -108,24 +200,31 @@
                         z-index: 110
                         padding: 0 !important;
                         margin: 0;
+                        visibility: visible
                         li
                             display: flex;
+                            align-items: center
+                            border: none !important
                             padding: 0;
                             margin: 0;
                             margin-right: 30px;
+                            color: $accent
                             &::before
                                 content: ''
                                 display: block;
                                 text-align: center;
                                 width: 20px;
                                 height: 20px;
-                                background: #F87866;
+                                background: traparrent  
                                 color: #fff
                                 margin-right: 7px;
-                                border-radius: 50px
+                                background: url(../img/svg/uncheck.svg) no-repeat center center / contain
                             &.checked
+                                background: none
+                                color: $accent
                                 &::before
-                                    content: '✔'
+                                    background: url(../img/svg/check.svg) no-repeat center center / contain
+
 
 
 
@@ -153,48 +252,74 @@
 .js_active 
     #top 
         .main_color
-            .custom-tabs-form .tab_titles
-                .tab    
-                    padding-top: 0
-                    
-                    // font-size: 18px
-                    // line-height: 21px
-                    // display: flex;
-                    // align-items: center;
-                    // padding: 15px 35px
-                    // background: none
-                    // color: grey
-                    &.active_tab
+            .custom-tabs-form 
+                .tab_titles
+                    border-bottom: 2px solid #C4C4C4 !important
+                    margin-bottom: 18px
+                    .tab    
+                        height: 40px
+                        margin-right: 5px
+                        font-size: 18px
+                        line-height: 21px
+                        align-items: center;
+                        padding: 11px 
+                        outline: none
+                        color: $text-grey
                         background: none
-                    .tab_icon
-                        display: none
-                    &:hover
-                        // color: #fff
+                        width: 110px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        transition: $transition
+                        border-bottom: 4px solid transparent !important
                         &.active_tab
-                            // color: grey
-                    // &::before
-                    //     font-family: fontello
-                    //     font-size: 40px
-                    //     color: #fff
-                    //     display: block;
-                    //     height: 30px;
-                    //     margin-right: 15px;
-                    // &:nth-child(1)
-                    //     &::before
-                    //         content: '\e802'
-                    // &:nth-child(2)
-                    //     &::before
-                    //         content: '\e803'
-                    // &:nth-child(3)
-                    //     &::before
-                    //         content: '\e804'
-                    // &.active_tab
-                    //     background: #F0F0F0;
-                    //     color: #000
-                    //     &::before
-                    //         font-weight: normal;
-                    //         color: #000
-                // .tab:first-child
-                //     border-top-left-radius: 18px
-                // .tab:last-child
-                //     border-top-right-radius: 18px
+                            font-style: normal;
+                            font-size: 20px;
+                            line-height: 21px;
+                            color: #000000;
+                            border-bottom: 4px solid $accent-red !important
+                        .tab_icon
+                            display: none                        
+                        &:hover
+                            border-bottom: 4px solid $accent-red !important
+                            &.active_tab
+                                // color: grey
+                        // &::before
+                        //     font-family: fontello
+                        //     font-size: 40px
+                        //     color: #fff
+                        //     display: block;
+                        //     height: 30px;
+                        //     margin-right: 15px;
+                        // &:nth-child(1)
+                        //     &::before
+                        //         content: '\e802'
+                        // &:nth-child(2)
+                        //     &::before
+                        //         content: '\e803'
+                        // &:nth-child(3)
+                        //     &::before
+                        //         content: '\e804'
+                        // &.active_tab
+                        //     background: #F0F0F0;
+                        //     color: #000
+                        //     &::before
+                        //         font-weight: normal;
+                        //         color: #000
+                    // .tab:first-child
+                    //     border-top-left-radius: 18px
+                    // .tab:last-child
+                    //     border-top-right-radius: 18px
+
+
+
+// випадайка near_my_location
+.snear+.gdlm-location-suggestions 
+    position: absolute
+    top: 100%
+    left: 50%
+    width: 98%
+    transform: translate(-50%,0)
+    z-index: 120
+    padding: 10px
+    border-radius: 0 0 10px 10px

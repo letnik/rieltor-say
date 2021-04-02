@@ -12,7 +12,7 @@ jQuery(document).ready(function () {
 			jQuery('.geodir-filter-cat:not(.gd-field-post_category)').removeClass('is-open');
 			jQuery(this).addClass('is-open');
 			jQuery('.geodir-filter-cat:not(.gd-field-post_category)').find('ul').fadeOut(200);
-			jQuery(this).find('ul').fadeIn(200);
+			// jQuery(this).find('ul').fadeIn(200);
 			jQuery('.trigger-filter').fadeIn(200);
 	
 		};

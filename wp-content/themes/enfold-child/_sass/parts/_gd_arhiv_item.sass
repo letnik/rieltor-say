@@ -1,4 +1,11 @@
 // карточка обєкту
+#main
+  .geodir-loop-container
+    ul.geodir-category-list-view
+      > li
+        border-top: 1px solid #E3E3E3 !important
+        &:nth-last-child()
+          border-bottom: 1px solid #E3E3E3 !important
 
 
 #main
@@ -9,20 +16,35 @@
       flex-direction: column
       justify-content: space-between
       align-items: stretch
-      padding-left: 30px
-      width: 100%;
+      padding-left: 20px
+      // width: 100%
+      width: auto
       .title_block
+        .address
+          flex-direction: column
+          br
+            display: none
+          .geodir_post_meta
+            margin: 5px 0 0 0
         span[itemprop="streetAddress"]
           font-style: normal
-          font-weight: 500
+          font-weight: 700
           font-size: 20px
+          line-height: 23px
           color: #2D2D2D
+        span[itemprop="addressLocality"], span[itemprop="addressNeighbourhood"]
+          font-style: normal
+          font-weight: 300
+          font-size: 16px
+          line-height: 18px
+          color: #434343
       .price_holder
         .geodir-field-price_2
-          font-style: normal;
-          font-weight: 500;
-          font-size: 25px;
-          line-height: 30px;
+          font-style: normal
+          font-weight: 700
+          font-size: 25px
+          line-height: 29px
+          color: #2D2D2D
       .inform_holder
         ul
           flex-wrap: wrap
@@ -30,9 +52,10 @@
           align-items: center
           margin: 0
           li
-            min-width: 33.3%
+            min-width: 32.3%
             align-items: center
-            margin: 0
+            margin: 0 1% 0 0
+            padding: 10px 0
             // margin-right: auto
             &::before
                 font-size: 30px
@@ -54,14 +77,35 @@
             // &:nth-child(5) 
             //   &::before
             //     content: '\e80e'
+          li, .geodir_post_meta
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 17px;
+            color: #808080
 
       .favorites, .distance
         position: absolute
         right: 0
       .favorites
         top: 0
+        .geodir_post_meta, .geodir-addtofav-icon
+          line-height: 0
       .distance
         bottom: 0
+        .geodir-i-distance
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 17px;
+          color: #434343;
+          display: flex
+          align-items: center
+          i
+            margin-right: 22px
+
+      
+
 
   .custom_gd_loop_wrap
     .gd_place
@@ -70,11 +114,16 @@
   .card_object 
     .image_box
       min-width: 250px
-      width: 250px
-      border-radius: 18px;
-      overflow: hidden;
+      width: 100%
+      max-width: 300px
+      border-radius: 10px
+      overflow: hidden
+      .geodir-post-slider, .geodir-image-container, .geodir-image-wrapper, .geodir-slides, .geodir-active-slide
+        height: 100%
       .geodir-image-wrapper.geodir_flexslider.geodir-slider
         position: relative
+        .geodir-active-slide
+          height: 100%
         .geodir-control-nav.geodir-control-paging
           position: absolute
           bottom: 0
@@ -87,12 +136,31 @@
           left: 0
 
   .geodir_flex-container  
-    margin: 0;  
+    margin: 0  
 
 body ul.geodir-category-list-view>li
-  margin-top: 30px !important;
+  margin-top: 25px !important
+  padding-top: 18px !important
 
 
+// #top
+//   .geodir-category-list-view
+//     .card_object
+//       justify-content: space-between
+//       .image_box
+//         width: 38%
+//       .contetnt_box
+//         width: 60%
+//         .title_block
+//           .address
+//             flex-direction: column
+//             br
+//               display: none
+//         .inform_holder
+//           .inform_list 
+//             .inform_list 
+//               flex-wrap: wrap
+//               .inform_item
 
 
 
