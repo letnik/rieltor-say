@@ -62,6 +62,7 @@
                         display: flex
                         align-items: center
                         border-radius: 10px
+                        outline: none
                         &::after
                             content: ''
                             display: block
@@ -76,6 +77,8 @@
                 padding: 0;
                 margin: 0;
                 background: none
+                width: calc(100% - 2px)
+                padding-top: 20px
 
             .geodir-filter-container
                 .geodir-advance-search
@@ -83,24 +86,48 @@
                 .geodir-filter-cat
                     padding: 0;
                     min-width: auto
-                    width: auto
-                    margin: 15px 20px 5px 5px
-                    flex: inherit !important
                     z-index: 110
+                    margin: 0
+                    width: 20%
+                    transition: $transition
+                    border: none !important
+                    border-radius: 0
+                    &.gd-field-property_bedrooms
+                        span
+                            border-radius: 10px 0 0 10px
+                    &.gd-field-distance
+                        span
+                            border-radius: 0 10px 10px 0 
+                            
                     > ul
                         position: absolute
-                        width: 250px
-                        background: #ccc
+                        left: 50%
+                        display: flex !important
+                        flex-wrap: wrap
+                        justify-content: start
+                        // min-width: 250px
+                        width: 98%
+                        // max-width: 400px
+                        background: #fff
                         padding: 10px !important
-                        display: none
+                        border-radius: 10px
                         z-index: 110
+                        visibility: hidden;
+                        transform: translate(-50%, 0)
+                        border-radius: 0 0 10px 10px
                         li
-                            display: inline-block
-                            padding: 5px 10px
-                            border-radius: 18px
-                            // border: 1px solid #555 !important
-                            margin-right: 10px
-                            margin-bottom: 10px
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            min-width: 30px
+                            min-height: 30px
+                            margin: 5px
+                            padding: 10px
+                            border-radius: 50px 
+                            border: solid 1px $accent !important
+                            font-size: 15px
+                            line-height: 0
+                            font-weight: 500
                             position: relative
                             overflow: hidden
                             input
@@ -114,66 +141,89 @@
                                 right: 0
                                 bottom: 0
                                 margin: 0
-                                border-radius: 12px
+                                border-radius: 10px
                                 cursor: pointer
                                 opacity: 0
-                                color: #6C6C6C
+                                color: $accent
                             &.checked
-                                // background: #555
-                                color: #000 
+                                background: $accent
+                                color: #fff
 
 
 
                     > span
-                        display: inline-block
-
-                        padding: 5px 15px
-                        border-radius: 100px
-                        border: 1px solid #555 !important
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        background: #fff
+                        padding: 13px 5px
+                        border-radius: 0
                         cursor: pointer
+                        position: relative
                         &:hover, &.is-open
                             background: #2d2d2d
-                            color: #fff  
-                        &.is-open
-                            > ul
-
-
-                    &.gd-field-post_category
-                        position: absolute
-                        top: -35px
-                        left: 5px;
-                        margin: 0;
-                        > span
-                            border: none
-                            display: none !important
+                            color: #fff 
+                            &::after
+                                display: none
+                        &::after
+                            content: ''
+                            display: block
+                            width: 2px
+                            height: 65% 
+                            background: #F0F0F0
+                            position: absolute
+                            right: 0
+                        &:nth-last-child()
+                            &::after
+                                display: none
+                            
+                    &.is-open
                         > ul
-                            width: 100%
-                            position: relative
-                            background: none
-                            padding: 10px !important
-                            display: flex !important
-                            z-index: 110
-                            padding: 0 !important;
+                            visibility: visible;
+
+
+                .geodir-filter-cat.gd-field-post_category
+                    position: absolute
+                    top: -45px
+                    left: 5px;
+                    margin: 0;
+                    width: auto
+                    > span
+                        border: none
+                        display: none !important
+                    > ul
+                        width: 100%
+                        position: relative
+                        background: none
+                        padding: 10px !important
+                        display: flex !important
+                        z-index: 110
+                        padding: 0 !important;
+                        margin: 0;
+                        visibility: visible
+                        li
+                            display: flex;
+                            align-items: center
+                            border: none !important
+                            padding: 0;
                             margin: 0;
-                            li
-                                display: flex;
-                                align-items: center
-                                padding: 0;
-                                margin: 0;
-                                margin-right: 30px;
+                            margin-right: 30px;
+                            color: $accent
+                            &::before
+                                content: ''
+                                display: block;
+                                text-align: center;
+                                width: 20px;
+                                height: 20px;
+                                background: traparrent  
+                                color: #fff
+                                margin-right: 7px;
+                                background: url(../img/svg/uncheck.svg) no-repeat center center / contain
+                            &.checked
+                                background: none
+                                color: $accent
                                 &::before
-                                    content: ''
-                                    display: block;
-                                    text-align: center;
-                                    width: 20px;
-                                    height: 20px;
-                                    background: traparrent  
-                                    color: #fff
-                                    margin-right: 7px;
-                                    background: url(../img/svg/uncheck.svg) no-repeat center center / contain
-                                &.checked
-                                    &::before
-                                        background: url(../img/svg/check.svg) no-repeat center center / contain
+                                    background: url(../img/svg/check.svg) no-repeat center center / contain
 
 
 
@@ -211,7 +261,6 @@
                         margin-right: 5px
                         font-size: 18px
                         line-height: 21px
-                        display: flex;
                         align-items: center;
                         padding: 11px 
                         outline: none
@@ -261,3 +310,16 @@
                     //     border-top-left-radius: 18px
                     // .tab:last-child
                     //     border-top-right-radius: 18px
+
+
+
+// випадайка near_my_location
+.snear+.gdlm-location-suggestions 
+    position: absolute
+    top: 100%
+    left: 50%
+    width: 98%
+    transform: translate(-50%,0)
+    z-index: 120
+    padding: 10px
+    border-radius: 0 0 10px 10px
