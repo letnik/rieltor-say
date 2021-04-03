@@ -113,7 +113,7 @@ wp_head();
 
 
 <body id="top" <?php body_class( $custom_body_classes . ' ' . $mfp_alt_text .' ' . $rtl_support . $style . ' ' . $avia_config['font_stack'] . ' ' . $blank . ' ' . $sidebar_styling); avia_markup_helper( array( 'context' => 'body' ) ); ?>>
-
+	
 	<?php 
 	
 	/**
