@@ -79,17 +79,27 @@ function nav_menu_custom() {
 
 
 
-add_action( 'geodir_after_search_form', 'action_function_name_2472' );
-function action_function_name_2472(){
+// add_action( 'geodir_after_search_form', 'action_function_name_2472' );
+// function action_function_name_2472(){
 
-    $triggerFilter = '<div class="trigger-filter"></div>';
-	echo $triggerFilter;
+//     $triggerFilter = '<div class="trigger-filter"></div>';
+// 	echo $triggerFilter;
 
-}
+// }
+
+// add_action( 'wp_footer', 'trigger_tilter_2', 1 );
+
+// function trigger_tilter_2() {
+//     $triggerTilter_2 = '<div class="trigger-filter"></div>';
+// 	echo $triggerTilter_2;
+    
+// }
+
 
 // // тест
 
 add_action( 'ava_after_main_container', 'users_primary_menu' );
+
 function users_primary_menu() {
     
     echo '<div id="top-menu-custom" class="top-menu-custom">';
