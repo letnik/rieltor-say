@@ -29,10 +29,46 @@ jQuery(document).ready(function () {
 	});
 });
 
-// провіряєм чекбокс у фільтрі
+
+
+
+
+
 jQuery(document).ready(function () {
 
-	jQuery('.geodir-filter-cat li input[type=checkbox]').each(function () {
+	jQuery('.btn.phones').on('click', function() {
+
+		jQuery(this).parent().find('ul.usesr_phones').toggleClass( "opened" );
+
+		// jQuery(this).parent().find('ul.usesr_phones').fadeToggle(200);
+
+	});
+});
+
+// провіряєм чекбокс у фільтрі
+// jQuery(document).ready(function () {
+
+// 	jQuery('.geodir-filter-cat li input[type=checkbox], .geodir-filter-cat li input[name="radio"]').each(function () {
+// 		if (jQuery(this).prop('checked')) {
+// 			jQuery(this).parent().addClass( "checked" );
+
+// 		} else {
+// 			jQuery(this).parent().removeClass( "checked" );
+
+// 		}
+// 	});
+
+// 	jQuery(":checkbox").change(function () {
+// 		jQuery(this).parent().toggleClass('checked');
+
+// 	});
+	
+// });
+
+
+jQuery(document).ready(function () {
+
+	jQuery('.geodir-filter-cat li input').each(function () {
 		if (jQuery(this).prop('checked')) {
 			jQuery(this).parent().addClass( "checked" );
 
@@ -42,7 +78,7 @@ jQuery(document).ready(function () {
 		}
 	});
 
-	jQuery(":checkbox").change(function () {
+	jQuery(".geodir-filter-cat li input").change(function () {
 		jQuery(this).parent().toggleClass('checked');
 
 	});
@@ -52,7 +88,36 @@ jQuery(document).ready(function () {
 
 
 
-jQuery(document).ready(function(){
+// $('input[name="radio"][value="1"]').prop('checked', true);
+ 
+// // Отметить 2-й
+// $('input[name="radio"][value="2"]').prop('checked', true);
+ 
+// // Отметить 3-й
+// $('input[name="radio"][value="3"]').prop('checked', true);
+ 
+// // Снять
+// $('input[name="radio"]').prop('checked', false);
+
+
+
+
+// jQuery(document).ready(function () {
+
+// 	private void radioButton_CheckedChanged(object sender, EventArgs e)
+// 	{
+// 			// приводим отправителя к элементу типа RadioButton
+// 			RadioButton radioButton = (RadioButton)sender;
+// 			if (radioButton.Checked)
+// 			{
+// 				jQuery(this).parent().addClass( "checked" );
+// 			}        
+// 	}
+
+// });
+
+
+// jQuery(document).ready(function(){
 
 
 	// var senseSpeed = 50;
@@ -89,7 +154,7 @@ jQuery(document).ready(function(){
 	//   }
 	// });
   
-});
+// });
   
 jQuery(document).ready(function(){
 	document.querySelector("#checkbox").addEventListener("change", () => {

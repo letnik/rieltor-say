@@ -1,0 +1,92 @@
+
+
+#top  
+  .inform_holder
+    > ul
+      > li
+        margin-left: 0
+        .uwp_widget_author_box
+          .user_card_wrap
+            display: flex
+            // align-items: center
+            // min-height: 250px
+            // height: 250px
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+            border-radius: 10px
+            overflow: hidden
+            .user_info
+              padding: 40px 35px
+              width: 65%
+              background: #F0F0F0
+              display: flex
+              align-items: center
+              justify-content: space-between
+              .user_avatar
+                width: 28%
+              .user_bio
+                width: 67%
+                // display: flex
+                // flex-direction: column
+                // justify-content: space-between
+                .about_user, .raiting_wrap
+                  margin-bottom: 20px
+                .name, .role
+                  margin-bottom: 5px
+                  color: #2D2D2D
+                .name
+                  font-weight: 500
+                  font-size: 20px
+                  line-height: 24px
+                  
+                .role
+                  font-weight: 300
+                  font-size: 16px
+                  line-height: 19px
+
+                  
+                .raiting_wrap_inner
+                  i, p 
+                    margin: 0 8px 0 0
+                .soc_net
+                  a
+                    margin: 0 15px 0 0 !important
+            .user_contact
+              padding: 40px 35px
+              width: 35%
+              display: flex
+              flex-direction: column
+              justify-content: space-around
+              .user_contact_item
+                text-align: center
+                .usesr_phones
+                  margin: 0
+                  height: 0
+                  opacity: 0
+                  overflow: hidden
+                  transition: $transition
+                  li 
+                    margin: 0 0 10px 0
+                    a
+                      font-weight: 1;
+                      font-size: 16px;
+                      line-height: 19px;
+                      color: $accent
+                  &.opened
+                    height: auto
+                    opacity: 1
+                .btn  
+                  padding: 11px 14px
+                  border-radius: 10px
+                  border: solid 1px $accent !important
+                  min-width: 190px
+                  width: auto
+                  max-width: 220px
+                  transition: $transition
+                  &.phones
+                    color: $accent
+                    &:hover
+                      background: $accent
+                      color: #fff
+
+
+
