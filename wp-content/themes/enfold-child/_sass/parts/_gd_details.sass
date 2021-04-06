@@ -2,8 +2,8 @@
 
 #top  
   .inform_holder
-    > ul
-      > li
+    > .inform_holder_inner
+      > div
         margin-left: 0
         .uwp_widget_author_box
           .user_card_wrap
@@ -50,14 +50,15 @@
                 .soc_net
                   a
                     margin: 0 15px 0 0 !important
+                    border-radius: 3px
             .user_contact
               padding: 40px 35px
               width: 35%
-              display: flex
-              flex-direction: column
-              justify-content: space-around
               .user_contact_item
-                text-align: center
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
                 .usesr_phones
                   margin: 0
                   height: 0
@@ -82,11 +83,162 @@
                   width: auto
                   max-width: 220px
                   transition: $transition
+                  display: flex
+                  align-items: center
+                  i
+                    margin-right: 10px
+                  &:hover              
+                    i
+                      filter: invert(1)
                   &.phones
                     color: $accent
                     &:hover
                       background: $accent
                       color: #fff
+                  &.mail
+                    color: #fff
+                    background: $accent
+                    margin-top: 15px
+                    &:hover
+                      background: #fff
+                      color: $accent
 
+
+
+    .contetnt_box
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: stretch
+      // padding-left: 20px
+      width: auto
+      .title_block
+        .address
+          flex-direction: column
+          br
+            display: none
+          .geodir_post_meta
+            margin: 5px 0 0 0
+        span[itemprop="streetAddress"]
+          font-style: normal
+          font-weight: 700
+          font-size: 20px
+          line-height: 23px
+          color: #2D2D2D
+        span[itemprop="addressLocality"], span[itemprop="addressNeighbourhood"]
+          font-style: normal
+          font-weight: 300
+          font-size: 16px
+          line-height: 18px
+          color: #434343
+      .price_holder
+        .geodir-field-price_2
+          font-style: normal
+          font-weight: 700
+          font-size: 25px
+          line-height: 29px
+          color: #2D2D2D
+      .inform_holder
+        ul
+          flex-wrap: wrap
+          justify-content: start
+          align-items: center
+          margin: 0
+          li
+            min-width: 32.3%
+            align-items: center
+            margin: 0 1% 0 0
+            padding: 10px 0
+            // margin-right: auto
+            &::before
+                font-size: 30px
+                color: #808080
+                font-family: fontello
+                margin-right: 12px
+
+          li, .geodir_post_meta
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 17px;
+            color: #808080
+      .discription
+
+        .uwp_widget_author_box
+          display: none
+        .title-field-custom
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          color: $accent
+          margin-bottom: 20px
+          span
+            display: none
+        .geodir-field-post_content h3
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 18px
+          color: $accent
+      .scroll_bar_wrap
+        .scroll_bar_nav
+          display: flex
+          // flex-wrap: wrap
+          justify-content: start
+          overflow-x: scroll
+          .scroll_bar_nav_item
+            font-weight: 1;
+            font-size: 18px;
+            line-height: 21px;
+            color: $text-grey
+            padding: 10px
+            border-bottom: 4px solid transparent !important
+            margin: 0 5px 10px 0;
+            background: transparent;
+            font-family: 'ubuntu','HelveticaNeue','Helvetica Neue','Helvetica-Neue',Helvetica,Arial,sans-serif;
+            &:hover
+              border-bottom: 4px solid $accent-red !important
+
+        .scroll_bar_item
+
+          .geodir_post_meta_title
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: $accent
+          ul
+            display: flex
+            flex-wrap: wrap
+            justify-content: start
+            li
+              padding: 10px 20px
+              border-radius: 50px
+              border: solid 1px $accent !important
+              font-weight: 1;
+              font-size: 15px;
+              line-height: 18px;
+              color: $accent
+              margin: 6px 10px 6px 0
+      .favorites, .distance
+        position: absolute
+        right: 0
+      .favorites
+        top: 0
+        .geodir_post_meta, .geodir-addtofav-icon
+          line-height: 0
+      .distance
+        bottom: 0
+        .geodir-i-distance
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 17px;
+          color: #434343;
+          display: flex
+          align-items: center
+          i
+            margin-right: 22px
+    
+
+ 
 
 
