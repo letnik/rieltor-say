@@ -140,6 +140,26 @@ function my_numposts_func( $atts ){
 
 
 
+add_shortcode( 'my_plases_lable_rs', 'my_plases_lable_rs_func' );
+
+function my_plases_lable_rs_func(){
+
+    // необязательно, но в некоторых случаях без этого не обойтись
+    
+    $posts = get_posts(array(
+        'numberposts'	=> -1,
+        'post_type'	=> 'gd_place',
+        'meta_key'	=> 'author',
+    ));
+
+
+
+    echo $posts;
+
+}
+
+
+
 // Дозволяєм завантаження усіх файлів
 // define( 'ALLOW_UNFILTERED_UPLOADS', true );
 
