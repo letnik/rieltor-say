@@ -218,3 +218,4 @@ function show_svg_in_media_library( $response ) {
 
 	return $response;
 }
+

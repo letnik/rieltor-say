@@ -1,0 +1,152 @@
+<div class="user_card">
+  <div class="user_card_wrap">
+    <div class="user_info">
+      <div class="user_avatar">
+        <a href="[#author_link#]"><img src="[#author_image_url#]" class="rounded-circle shadow border border-white border-width-4 mr-3" alt="[#author_name#]"></a>
+      </div>
+      <div class="user_bio">
+        <div class="about_user">
+          <h3 class="name"><a href="[#author_link#]">[#author_name#]</a></h3>
+          <p class="role">!!user_role!![#user_role#]</p>
+        </div>
+        <div class="raiting_wrap">
+          <div class="raiting_wrap_inner d-flex">
+            <i class="icon-rs raiting_ico"></i>
+            <p>[mycred_total_balance]</p>
+            <i class="icon-rs inform-ico"></i>
+          </div>
+        </div>
+        <div class="soc_net">
+          [uwp_button_group]
+        </div>
+      </div>
+    </div>
+    <div class="user_contact">
+      <div class="user_contact_item">
+        <div class="usesr_phones">
+          <p><a href="tel:[#_1#]">[#_1#]</a></p>
+          <p><a href="tel:[#_2#]">[#_2#]</a></p>
+          <p><a href="tel:[#_3#]">[#_3#]</a></p>
+        </div>
+        <button class="btn">Показати номер</button>
+      </div>
+      <div class="user_contact_item">
+        <div class="mail_link">
+          <p class="mail_link_item"><a href="[#email#]">[#email#]</a></p>
+        </div>
+        <button class="btn">Написати мені</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<i class="icon-rs icon-phone icon-mail_fill"></i>
+
+<div class="sticker-map-container">
+  <div class="list custom-tabs-form">
+    <div id="yoast_breadcrumb-custom" class="yoast_breadcrumb-custom">
+      <div id="breadcrumbs">[wpseo_breadcrumb]</div>
+    </div>
+    <div class="inform_holder">
+      <div class="inform_holder_inner">
+        <div>[uwp_author_box title="Widget title"]</div>
+        <div>gd_author_actions / [gd_author_actions]</div>
+      </div>
+      <div class="contetnt_box">
+        <div class="d-flex ai-start jc-between">
+          <div class="title_block">
+            <address class="address d-flex">
+              <span class="line-top">[gd_post_address show="value" address_template="%%street%%"]</span>
+              <span class="line-bottom">[gd_post_address show="value" address_template="%%city%%, %%neighbourhood_br%%"]</span>
+            </address>
+          </div>
+          <div class="price_holder">
+            <p class="price">[gd_post_content show="value" key='price_2']</p>
+          </div>
+        </div>
+      <div class="inform_holder">
+        <ul class="inform_list d-flex flex-wrap">
+          <li class="inform_item d-flex"><i class="icon-rs icon-brickwall"></i>[gd_post_content show="value" key='property_bedrooms'] кім</li>
+          <li class="inform_item d-flex"><i class="icon-rs icon-blueprint"></i>[gd_post_content show="value" key='property_area_3']/[gd_post_content key='property_area']/[gd_post_content key='kitchen_area_field_custom'] м<sup><small>2</small></sup></li>
+          <li class="inform_item d-flex"><i class="icon-rs icon-poverh"></i>[gd_post_content show="value" key='floor_field_custom']/[gd_post_content key='number_floors_field_custom'] п</li>
+          <li class="inform_item d-flex"><i class="icon-rs icon-brickwall"></i>[gd_post_content show="value" key='property_type']</li>
+          <li class="inform_item d-flex"><i class="icon-rs icon-brickwall"></i>[gd_post_content show="value" key='type_of_bilding']</li>
+          <li class="inform_item d-flex"><i class="icon-rs icon-brickwall"></i>[gd_post_content show="value" key='wall_material_field_custom']</li>
+        </ul>
+      </div>
+      <div class="discription">
+        <div class="discription_inner">
+          [gd_post_meta key="post_title"]
+          [gd_post_content key="post_content" show="value"]
+        </div>
+      </div>
+      <div class="scroll_bar_wrap">
+        <div class="scroll_bar_nav">
+          <button class="scroll_bar_nav_item">household_appliances</button>
+          <button class="scroll_bar_nav_item">communications</button>
+          <button class="scroll_bar_nav_item">additionally</button>
+          <button class="scroll_bar_nav_item">repair</button>
+          <button class="scroll_bar_nav_item">amenities</button>
+          <button class="scroll_bar_nav_item">multimedia</button>
+          <button class="scroll_bar_nav_item">property_features</button>
+          <button class="scroll_bar_nav_item">property_furnishing</button>
+        </div>
+        <div class="scroll_bar_inner">
+          <div class="scroll_bar_item" id="household_appliances">
+            [gd_post_meta key="household_appliances"]
+          </div>
+          <div class="scroll_bar_item" id="communications">
+            [gd_post_meta key="communications"]
+          </div>
+          <div class="scroll_bar_item" id="additionally">
+            [gd_post_meta key="additionally"]
+          </div>
+          <div class="scroll_bar_item" id="repair">
+            [gd_post_meta key="repair"]
+          </div>
+          <div class="scroll_bar_item" id="amenities">
+            [gd_post_meta key="amenities"]
+          </div>
+          <div class="scroll_bar_item" id="multimedia">
+            [gd_post_meta key="multimedia"]
+          </div>
+          <div class="scroll_bar_item" id="property_features">
+            [gd_post_meta key="property_features"]
+          </div>
+          <div class="scroll_bar_item" id="property_furnishing">
+            [gd_post_meta key="property_furnishing"]
+          </div>
+        </div>
+      </div>
+      <div class="distance">[gd_post_distance]</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticker-tabs">
+  
+    [av_tab_container initial='1' position='top_tab' boxed='border_tabs' alb_description='' id='' custom_class='' av_uid='av-kkqzwaae']
+    [av_tab title='Фото' icon_select='no' icon='ue800' font='entypo-fontello' custom_id='' av_uid='av-28unt']
+    [gd_post_images type="gallery" ajax_load="1" slideshow="1" show_title="1" animation="slide" controlnav="1" link_to="lightbox" limit_show="3"]
+    [/av_tab]
+    [av_tab title='Карта' icon_select='no' icon='ue800' font='entypo-fontello' custom_id='' av_uid='av-1dlnt']
+    [gd_map width="100%" height="100vh" maptype="ROADMAP" zoom="0" map_type="auto" post_settings="1" marker_cluster="1"]
+    [/av_tab]
+    [av_tab title='Tab Title' icon_select='no' icon='ue800' font='entypo-fontello' custom_id='' av_uid='av-11d2p']
+    чсмчсм
+    [/av_tab]
+    [/av_tab_container]
+  
+  </div>
+</div>
+
+
+
+
+
+
+
+[gd_post_meta key="household_appliances"]
+
+Пральна машина, Холодильник, Електрочайник,  Кавомашина,   Фен, Духова шафа, Плита,  Шафа-купе,  Мікрохвильова піч, Мультиварка, Праска, Посудомийна машина, Cушильна машина,  Пилосос,  Без побутової техніки
