@@ -161,3 +161,12 @@ jQuery(document).ready(function(){
 		document.body.classList.toggle("dark");
 	});
 });
+
+
+
+
+
+jQuery(document).ready(function(){
+	var elemCount = jQuery('.sticker-tabs ul.geodir-gallery.geodir-images li').length;
+	jQuery('.sticker-tabs ul.geodir-gallery.geodir-images li:nth-child(4) a').attr( 'attributeCountLi', elemCount );
+}); 
