@@ -161,3 +161,44 @@ jQuery(document).ready(function(){
 		document.body.classList.toggle("dark");
 	});
 });
+
+// jQuery(document).ready(function(){
+// 	jQuery("<div class='step'>").insertBefore(jQuery("#geodir_fieldset_136"));
+// 	jQuery("</div><class='step'>").insertBefore(jQuery("#geodir_fieldset_137"));
+// 	jQuery("</div").insertBefore(jQuery("#geodir_fieldset_138"));
+// });
+
+
+// jQuery(document).ready(function(){
+// 	jQuery(".required_field").each(function(){
+// 		jQuery(this).nextUntil(".required_field").addBack().wrapAll("<div class='rs_wrapper'>");
+// 	});
+	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery("h5#geodir_fieldset_119").next().wrapAll("<div class='wrapper'></div>");
+// });
+
+// jQuery(document).ready(function(){
+// 	jQuery("#geodir_fieldset_136").each(function(){
+// 		jQuery(this).next("div").wrapAll("<div class='rs_wrapper'>");
+// 	});
+	
+// });
+
+jQuery(document).ready(function(){
+	jQuery('#gd_placecategory_row').wrapAll('<div class="rs_wrapper"></div>');
+});
+jQuery(document).ready(function(){
+	jQuery('#property_type_row').wrapAll('<div class="rs_wrapper"></div>');
+});
+jQuery(document).ready(function(){
+	jQuery('#post_title_row').wrapAll('<div class="rs_wrapper"></div>');	
+});
+jQuery(document).ready(function(){
+	jQuery('#type_of_bilding_row').wrapAll('<div class="rs_wrapper"></div>');	
+});
+jQuery(document).ready(function(){
+	setTimeout(jQuery('.rs_wrapper').wrapAll('<div id="step_1" class="step_1"></div>'), 1000);
+	
+});
