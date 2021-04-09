@@ -162,6 +162,7 @@ jQuery(document).ready(function(){
 	});
 });
 
+
 // jQuery(document).ready(function(){
 // 	jQuery("<div class='step'>").insertBefore(jQuery("#geodir_fieldset_136"));
 // 	jQuery("</div><class='step'>").insertBefore(jQuery("#geodir_fieldset_137"));
@@ -202,3 +203,12 @@ jQuery(document).ready(function(){
 	setTimeout(jQuery('.rs_wrapper').wrapAll('<div id="step_1" class="step_1"></div>'), 1000);
 	
 });
+
+
+
+
+
+jQuery(document).ready(function(){
+	var elemCount = jQuery('.sticker-tabs ul.geodir-gallery.geodir-images li').length;
+	jQuery('.sticker-tabs ul.geodir-gallery.geodir-images li:nth-child(4) a').attr( 'attributeCountLi', elemCount );
+}); 
