@@ -1,0 +1,199 @@
+#top
+  #header
+    // overflow-x: hidden !important
+    .logo
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+    .main_menu
+      
+      .avia-menu
+        display: flex
+        justify-content: flex-end
+        width: 100%
+        
+        > ul.av-main-nav
+          > li
+            padding: 40px 20px
+            > a
+              padding: 0
+              .avia-menu-text
+                font-size: 17px
+                line-height: 23px
+                font-weight: normal;
+                color: $text-black
+              &:hover
+                .avia-menu-text
+                  color: $accent
+                  transition: $transition
+            &.av-burger-menu-main
+              top: 50%;
+              right: 0;
+              padding: 0;
+              transform-origin: top;
+              .av-hamburger
+                .av-hamburger-inner
+                  background: $text-black
+                  &::before, &::after
+                    background: $text-black !important
+
+                // &.is-active
+                //   .av-hamburger-inner
+                //     background: $text-black
+                //     &::before, &::after
+                //       background: $text-black !important
+
+                  
+
+    .sup-menu
+      .sup-menu-wrap  
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-left: 25px;
+        border-top: 10px solid $accent2
+        position: relative
+        height: 100%
+        &::after
+          border-top: 10px solid $accent2
+          content: '';
+          display: block;
+          position: absolute;
+          height: 100%
+          width: 52px
+          right: -50px
+          top: -10px
+          overflow-x: hidden
+        .faq
+          a
+            color: $text-black
+            font-size: 15px
+            line-height: 20px
+            text-decoration: none
+            padding-left: 36px
+            &:hover
+              color: $accent  
+              transition: all .2s
+        .contact
+          &-list
+            display: flex
+            margin: 0
+          &-item  
+            padding: 10px 
+            position: relative;
+            span
+              display: none
+            &:nth-child(2)
+              &::before
+                content: ''
+                display: none;
+                background: $text-grey
+                height: 65%;
+                width: 1px;
+                position: absolute;
+                top: 18.5%
+                left: 0
+
+              
+            a 
+              display: flex
+              color: $text-black
+              font-size: 15px
+              line-height: 20px
+              text-decoration: none
+              &:hover
+                color: $accent  
+                transition: all .2s
+                > i
+                  &::before
+                    color: $accent
+              i
+                &::before
+
+                  font-size: 20px
+                  color: $text-grey
+                  font-family: fontello
+              .icon-envelope
+                &::before
+                  content: '\E810'
+              .icon-phone
+                &::before
+                  content: '\E805'
+
+
+@media screen and ( min-width: 540px )
+
+  #top #header .sup-menu .sup-menu-wrap .contact-list
+    flex-direction: column
+    .contact-item
+      padding: 10px 26px
+      a 
+        i
+          margin-right: 12px
+        span 
+          display: block
+
+@media screen and ( min-width: 990px )
+
+  #top
+    #header
+      .main_menu
+        display: block
+        .avia-menu
+          justify-content: start
+          margin-left: 60px
+      .sup-menu
+
+        .sup-menu-wrap  
+          display: flex
+          justify-content: space-between
+          align-items: center
+          padding-left: 25px;
+          border-bottom: 1px solid $text-grey;
+          &::after
+            border-bottom: 1px solid $text-grey
+            // height: 57px;
+          .contact
+            &-list
+              flex-direction: row
+            .contact-item  
+              padding: 18px 36px
+              position: relative;
+              &:nth-child(2)
+                &::before
+                  display: block;
+
+@media screen and ( min-width: 1200px )
+
+  #top
+    #header
+      .main_menu
+        .avia-menu  
+          > ul.av-main-nav
+            > li
+              padding: 25px 32px
+        
+
+
+
+@media screen and ( min-width: 1311px )
+
+  #header_main 
+    > .container
+      > .inner-container
+        > .logo 
+          &:before
+            width: calc( var(--marginB) + 52px )
+            left: calc( var(--lefterB) - 48px )
+        
+
+
+  #top
+    #header
+      .sup-menu
+        .sup-menu-wrap  
+          &::after
+            width: calc(var(--marginB) + 52px)
+            right: calc(var(--lefterB) - 48px)
+

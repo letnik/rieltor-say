@@ -199,6 +199,7 @@ jQuery(document).ready(function(){
 jQuery(document).ready(function(){
 	jQuery('#type_of_bilding_row').wrapAll('<div class="rs_wrapper"></div>');	
 });
+
 jQuery(document).ready(function(){
 	setTimeout(jQuery('.rs_wrapper').wrapAll('<div id="step_1" class="step_1"></div>'), 1000);
 	
