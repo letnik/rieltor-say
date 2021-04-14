@@ -234,11 +234,7 @@ function show_svg_in_media_library( $response ) {
 
 
 
-
-
-
-
-
+include_once("includes/my_shortcodes.php");
 
 
 
