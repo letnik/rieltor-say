@@ -34,13 +34,13 @@ function sl_tel($tel) {
     return preg_replace('/[^0-9+]/', '', $tel);
 }
 
-// // add_shortcode logo
-// add_shortcode('avs_avia_logo', 'callback_avia_logo');
-// function callback_avia_logo() {
-//     $logo = avia_get_option('logo');
-//     $logo = !empty( $logo ) ? $logo : AVIA_BASE_URL.'images/layout/logo.svg';
-//     return  avia_logo($logo, '', 'strong', true);
-// }
+// add_shortcode logo
+add_shortcode('avs_avia_logo', 'callback_avia_logo');
+function callback_avia_logo() {
+    $logo = avia_get_option('logo');
+    $logo = !empty( $logo ) ? $logo : AVIA_BASE_URL.'images/layout/logo.svg';
+    return  avia_logo($logo, '', 'strong', true);
+}
 
 
 add_action( 'after_setup_theme', 'theme_register_nav_menu' );
@@ -96,13 +96,19 @@ function nav_menu_custom() {
 // }
 
 
+
 // // тест
 
 add_action( 'ava_after_main_container', 'users_primary_menu' );
 
 function users_primary_menu() {
-    
+
     echo '<div id="top-menu-custom" class="top-menu-custom">';
+    echo '<div id="beta" class="beta">beta start</div>';
+    echo '<div id="search" class="search">';
+    echo do_shortcode('[avia_search]');
+    echo '</div>';
+
 
     wp_nav_menu( array(
         'menu_class'=>'menu-abra',
@@ -218,3 +224,40 @@ function show_svg_in_media_library( $response ) {
 
 	return $response;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// add_shortcode('avia_search', 'avia_change_schema_attributes');
+
+// add_filter('avf_markup_helper_attributes','avia_change_schema_attributes', 10, 2);
+// function avia_change_schema_attributes($attributes, $args)
+// {
+// 	if($args['context'] == 'phone')
+// 	{
+// 		unset($attributes);
+// 	}
+
+// 	return $attributes;
+// }
+

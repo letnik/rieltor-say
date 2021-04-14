@@ -53,7 +53,25 @@
                 display: block !important
                 grid-area: 7 / 5 / 9 / 9;
                 margin-top: 1px !important
-            // &:nth-child(5)
+                position: relative
+                a
+                    &::before
+                        content: attr(attributecountli)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        font-weight: 500;
+                        font-size: 72px;
+                        line-height: 85px;
+                        color: $accent
+                        background: rgba(255,255,255, 0.5 )
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        filter: blur(0px);
+                        z-index: 1;
 
             img
                 border-radius: 0 !important
