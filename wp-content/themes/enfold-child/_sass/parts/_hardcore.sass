@@ -1,25 +1,25 @@
 // #av-layout-grid-2
-//     display: flex !important;
-//     float: none;
+//     display: flex !important
+//     float: none
 //     clear: none
 //     // .flex_cell:nth-child(2)
 //     //    .flex_cell_inner
-//     //        height: 100%;
+//     //        height: 100%
 
 // body
 //     font-family: 'rubik' !important
 //     *
 //         font-family: 'rubik' !important
 .sticker-map-container
-    display: grid;
+    display: grid
     grid-template-columns: 50% 50%
 
 
 .sticker-map, .sticker-tabs
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 100vh;
+    position: -webkit-sticky
+    position: sticky
+    top: 0
+    height: 100vh
 
 html.responsive, .responsive body, #wrap_all
     overflow:  visible !important
@@ -41,31 +41,31 @@ html.responsive, .responsive body, #wrap_all
 // .menu-item-top-level
 //     transition: all .2s
 // .current-menu-item, .menu-item-top-level:hover
-//     margin-right: -12px !important;
+//     margin-right: -12px !important
 
 .sticker-map-container
     .list
-        padding: 0 27px;
+        padding: 0 27px
     .tabcontainer
         transition: all .3s
-        // position: static;
-        // top: -200px;
+        // position: static
+        // top: -200px
         // &.sticky
-        //     position: sticky;
+        //     position: sticky
         //     transition: all .3s
-        //     top: -10px;
-        //     z-index: 10;
-        //     background: #fff !important;
+        //     top: -10px
+        //     z-index: 10
+        //     background: #fff !important
 
 #header_main
-    background: #fefefe;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); 
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    background: #fefefe
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1) 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1)
 
 .custom-tabs-form
     .tabcontainer 
-        padding: 30px 0;
-        // overflow-x: hidden;
+        padding: 30px 0
+        // overflow-x: hidden
         overflow: visible
     br 
         display: none
@@ -77,15 +77,24 @@ html.responsive, .responsive body, #wrap_all
     .list, .sticker-tabs, .sticker-map
         margin-top: -1px !important
 
-#scroll-top-link ,#scroll-top-link.avia_pop_class, #av-cookie-consent-badge.avia_pop_class
-    right: calc(50% - 20px) !important
-    bottom: 30px !important
-    background-color: #808080;
-    color: #fff;
-    &:hover
-        background-color: #808080;
-        opacity: 1;
-        color: #ebebeb
+#top
+    #scroll-top-link ,#scroll-top-link.avia_pop_class, #av-cookie-consent-badge.avia_pop_class
+        right: 8% !important
+        left: 12%
+        width: 80%
+        bottom: 30px !important
+        background-color: #808080
+        color: #fff
+        border-radius: 10px
+        &:hover
+            background-color: #808080
+            opacity: 1
+            color: #ebebeb
+    &.archive, .single
+        #scroll-top-link ,#scroll-top-link.avia_pop_class, #av-cookie-consent-badge.avia_pop_class
+            left: auto
+            right: calc(50% - 20px) !important
+            width: calc(50% - 100px)
 
 .geodir-loop-container
     .geodir_post_meta_icon
@@ -115,9 +124,10 @@ html.responsive, .responsive body, #wrap_all
     span
         margin-left: 10px
     i.fas
-        width: 25px;
+        width: 25px
         height: 25px
         font-size: 25px
         // &::before
-        //     width: 25px;
+        //     width: 25px
         //     height: 25px
+
