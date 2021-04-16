@@ -43,61 +43,15 @@ function callback_avia_logo() {
 }
 
 
+
 add_action( 'after_setup_theme', 'theme_register_nav_menu' );
 function theme_register_nav_menu() {
 	register_nav_menu( 'primary', 'Primary Menu' );
 }
-
-
-
-// add_shortcode('avs_avia_logo', 'callback_avia_logo');
-// function callback_avia_logo() {
-// 	$logo = avia_get_option('logo');
-// 	return  avia_logo($logo, '', 'strong', true);
-// }
-
-// add_action( 'ava_after_main_menu', 'nav_logo_custom' );
-// function nav_logo_custom() {
-
-//     $logo = avia_get_option('logo');
-//     echo $logo;
-
-// }
-
-add_action( 'ava_after_main_menu', 'nav_menu_custom' );
-function nav_menu_custom() {
-
-	wp_nav_menu( array(
-        'menu_class'=>'menu-abra',
-        'theme_location'=>'primary',
-        'after'=>''
-    ) );
-    echo '<div class="centro">dark_mode</div>
-    <div class="dark_mode"><input type="checkbox" id="dark_mode" /></div>';
+add_action( 'after_setup_theme', 'theme_register_nav_menu_2' );
+function theme_register_nav_menu_2() {
+	register_nav_menu( 'header_menu', 'header_menu' );
 }
-
-
-
-
-// add_action( 'geodir_after_search_form', 'action_function_name_2472' );
-// function action_function_name_2472(){
-
-//     $triggerFilter = '<div class="trigger-filter"></div>';
-// 	echo $triggerFilter;
-
-// }
-
-// add_action( 'wp_footer', 'trigger_tilter_2', 1 );
-
-// function trigger_tilter_2() {
-//     $triggerTilter_2 = '<div class="trigger-filter"></div>';
-// 	echo $triggerTilter_2;
-    
-// }
-
-
-
-// // тест
 
 add_action( 'ava_after_main_container', 'users_primary_menu' );
 
@@ -112,7 +66,7 @@ function users_primary_menu() {
 
     wp_nav_menu( array(
         'menu_class'=>'menu-abra',
-        'theme_location'=>'primary',
+        'theme_location'=>'header_menu',
         'after'=>''
     ) );
 
@@ -120,6 +74,24 @@ function users_primary_menu() {
     ';
 
 }
+
+add_action( 'ava_after_main_menu', 'nav_menu_custom' );
+function nav_menu_custom() {
+
+	wp_nav_menu( array(
+        'menu_class'=>'menu-abra',
+        'theme_location'=>'primary',
+        'after'=>''
+    ) );
+    echo '<div class="spu-open-666">Локація</div><div class="centro">dark_mode</div>
+    <div class="dark_mode"><input type="checkbox" id="dark_mode" /></div>';
+}
+
+
+
+// // тест
+
+
 
 // add_shortcode( 'show_breadcrumbs', 'shortcode_breadcrumbs' );
 
