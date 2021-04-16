@@ -190,38 +190,44 @@ jQuery(document).ready(function(){
 
 // step_1
 
+// jQuery(document).ready(function(){
+// 	jQuery('#gd_placecategory_row').wrapAll('<div class="rs_wrapper_1"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#property_type_row').wrapAll('<div class="rs_wrapper_1"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#post_title_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#type_of_bilding_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#plane_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#property_bedrooms_row').wrapAll('<div class="rs_wrapper_1"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#floor_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#number_floors_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#property_area_3_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#property_area_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#kitchen_area_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+// });
+
+
+
 jQuery(document).ready(function(){
-	jQuery('#gd_placecategory_row').wrapAll('<div class="rs_wrapper_1"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#property_type_row').wrapAll('<div class="rs_wrapper_1"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#post_title_row').wrapAll('<div class="rs_wrapper_1"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#type_of_bilding_row').wrapAll('<div class="rs_wrapper_1"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#plane_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#property_bedrooms_row').wrapAll('<div class="rs_wrapper_1"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#floor_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#number_floors_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#property_area_3_row').wrapAll('<div class="rs_wrapper_1"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#property_area_row').wrapAll('<div class="rs_wrapper_1"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#kitchen_area_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+	jQuery('#gd_placecategory_row,#property_type_row,#post_title_row,#type_of_bilding_row,#plane_field_custom_row,#property_bedrooms_row,#floor_field_custom_row,#number_floors_field_custom_row,#property_area_3_row,#property_area_row,#kitchen_area_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
 });
 
 jQuery(document).ready(function(){
@@ -231,39 +237,46 @@ jQuery(document).ready(function(){
 
 // step_2
 
-jQuery(document).ready(function(){
-	jQuery('#wall_material_field_custom_row').wrapAll('<div class="rs_wrapper_2"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#ceiling_height_row').wrapAll('<div class="rs_wrapper_2"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#balkony_row').wrapAll('<div class="rs_wrapper_2"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#property_features_row').wrapAll('<div class="rs_wrapper_2"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#property_furnishing_row').wrapAll('<div class="rs_wrapper_2"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#repair_row').wrapAll('<div class="rs_wrapper_2"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#property_bathrooms_row').wrapAll('<div class="rs_wrapper_2"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#amenities_row').wrapAll('<div class="rs_wrapper_2"></div>');	
-});
+// jQuery(document).ready(function(){
+// 	jQuery('#wall_material_field_custom_row').wrapAll('<div class="rs_wrapper_2"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#ceiling_height_row').wrapAll('<div class="rs_wrapper_2"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#balkony_row').wrapAll('<div class="rs_wrapper_2"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#property_features_row').wrapAll('<div class="rs_wrapper_2"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#property_furnishing_row').wrapAll('<div class="rs_wrapper_2"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#repair_row').wrapAll('<div class="rs_wrapper_2"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#property_bathrooms_row').wrapAll('<div class="rs_wrapper_2"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#amenities_row').wrapAll('<div class="rs_wrapper_2"></div>');	
+// });
+
+// jQuery(document).ready(function(){
+// 	jQuery('#household_appliances_row').wrapAll('<div class="rs_wrapper_2"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#multimedia_row').wrapAll('<div class="rs_wrapper_2"></div>');
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#communications_row').wrapAll('<div class="rs_wrapper_2"></div>');	
+// });
+
+
+
 
 jQuery(document).ready(function(){
-	jQuery('#household_appliances_row').wrapAll('<div class="rs_wrapper_2"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#multimedia_row').wrapAll('<div class="rs_wrapper_2"></div>');
-});
-jQuery(document).ready(function(){
-	jQuery('#communications_row').wrapAll('<div class="rs_wrapper_2"></div>');	
+	jQuery('#wall_material_field_custom_row,#ceiling_height_row,#balkony_row,#property_features_row,#property_furnishing_row,#repair_row,#property_bathrooms_row,#amenities_row,#household_appliances_row,#multimedia_row,#communications_row').wrapAll('<div class="rs_wrapper_2"></div>');	
 });
 
 jQuery(document).ready(function(){
@@ -274,45 +287,50 @@ jQuery(document).ready(function(){
 
 
 
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_street_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_country_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_region_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_city_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_neighbourhood_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_map_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_latitude_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_longitude_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#geodir_address_mapview_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#post_content_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#price_2_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#price__commission_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#post_images_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+// });
+
 jQuery(document).ready(function(){
-	jQuery('#geodir_address_street_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+	jQuery('#post_images_row,#price__commission_row,#price_2_row,#post_content_row,#geodir_address_mapview_row,#geodir_address_longitude_row,#geodir_address_latitude_row,#geodir_address_map_row,#geodir_address_neighbourhood_row,#geodir_address_city_row,#geodir_address_region_row,#geodir_address_country_row,#geodir_address_street_row').wrapAll('<div class="rs_wrapper_3"></div>');	
 });
-jQuery(document).ready(function(){
-	jQuery('#geodir_address_country_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#geodir_address_region_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#geodir_address_city_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#geodir_address_neighbourhood_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#geodir_address_map_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#geodir_address_latitude_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#geodir_address_longitude_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#geodir_address_mapview_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#post_content_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#price_2_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#price__commission_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#post_images_row').wrapAll('<div class="rs_wrapper_3"></div>');	
-});
+
 
 jQuery(document).ready(function(){
 	setTimeout(jQuery('.rs_wrapper_3').wrapAll('<div id="step_3" class="step_3"></div>'), 1000);
@@ -320,18 +338,25 @@ jQuery(document).ready(function(){
 
 
 
+// jQuery(document).ready(function(){
+// 	jQuery('#business_hours_row').wrapAll('<div class="rs_wrapper_4"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#expire_date_row').wrapAll('<div class="rs_wrapper_4"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#post_tags_row').wrapAll('<div class="rs_wrapper_4"></div>');	
+// });
+// jQuery(document).ready(function(){
+// 	jQuery('#to_whom_they_offer_row').wrapAll('<div class="rs_wrapper_4"></div>');	
+// });
+
+
+
 jQuery(document).ready(function(){
-	jQuery('#business_hours_row').wrapAll('<div class="rs_wrapper_4"></div>');	
+	jQuery('#to_whom_they_offer_row,#post_tags_row,#expire_date_row,#business_hours_row').wrapAll('<div class="rs_wrapper_4"></div>');	
 });
-jQuery(document).ready(function(){
-	jQuery('#expire_date_row').wrapAll('<div class="rs_wrapper_4"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#post_tags_row').wrapAll('<div class="rs_wrapper_4"></div>');	
-});
-jQuery(document).ready(function(){
-	jQuery('#to_whom_they_offer_row').wrapAll('<div class="rs_wrapper_4"></div>');	
-});
+
 
 jQuery(document).ready(function(){
 	setTimeout(jQuery('.rs_wrapper_4').wrapAll('<div id="step_4" class="step_4"></div>'), 1000);
