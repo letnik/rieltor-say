@@ -83,8 +83,9 @@ function nav_menu_custom() {
         'theme_location'=>'primary',
         'after'=>''
     ) );
-    echo '<div class="spu-open-666">Локація</div><div class="centro">dark_mode</div>
-    <div class="dark_mode"><input type="checkbox" id="dark_mode" /></div>';
+    echo '<div class="spu-open-666">Локація</div>';
+    // <div class="centro">dark_mode</div>
+    // <div class="dark_mode"><input type="checkbox" id="dark_mode" /></div>';
 }
 
 
