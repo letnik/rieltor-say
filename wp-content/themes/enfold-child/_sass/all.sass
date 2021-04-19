@@ -242,9 +242,10 @@
       display: flex
       justify-content: start
       transition: $transition
+      
       > span
         width: 31%
-        margin-right: 2%
+        margin-right: auto
         padding: 20px 16px
         display: flex !important
         align-items: center
@@ -256,6 +257,8 @@
         font-size: 15px;
         line-height: 17px;
         color: #6C6C6C
+        &:last-child
+          margin-right: 0
         input
           width: 100%
           height: 100%
@@ -284,14 +287,34 @@
           &::before
             background: url(../img/svg/check.svg) no-repeat center center / contain
 
-  .geodir-fieldset-row, #post_title_row, #go_step_2
+  .geodir-fieldset-row, #post_title_row, .step_wrap
     width: 100%
+
+  .step_wrap
+    margin-top: 50px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    #go_step_2
+      padding: 12px 25px
+      color: #fff
+      background: $accent
+      font-weight: 1;
+      font-size: 15px;
+      line-height: 18px;
+      border-radius: 12px
+      cursor: pointer
+      transition: $transition
+      &:hover
+        background: lighten($accent, 10%)
 
   #property_type_row,#type_of_bilding_row,#plane_field_custom_row,#property_bedrooms_row,#floor_field_custom_row,#number_floors_field_custom_row,#property_area_3_row,#property_area_row,#kitchen_area_field_custom_row
     // max-width: 31%
-    width: 31%
+    width: 30%
     margin-top: 30px
     margin-right: auto
+    .geodir_message_note
+      display: none
 
     label
       float: none
@@ -305,7 +328,7 @@
     input
         display: flex
         align-items: center
-        width: 90% !important
+        width: 100% !important
         margin: 18px auto 0 0
         background: #ccc !important
         color: $accent !important
@@ -314,7 +337,7 @@
         height: 45px !important
     
     .select2
-      width: 90% !important
+      width: 100% !important
       margin: 18px auto 0 0
       .select2-selection
         // background: #fff

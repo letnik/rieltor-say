@@ -196,7 +196,7 @@ jQuery(document).ready(function(){
 
 	setTimeout(jQuery('.rs_wrapper_1').wrapAll('<div id="step_1" class="step_1"></div>'), 1);
 
-	jQuery(".rs_wrapper_1").append("<div id='go_step_2'>Крок 2</div>");
+	jQuery(".rs_wrapper_1").append("<div class='step_wrap'><div id='go_step_2'>Крок 2</div></div>");
 
 });
 
