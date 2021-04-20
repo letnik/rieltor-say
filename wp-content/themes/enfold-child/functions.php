@@ -53,24 +53,35 @@ function theme_register_nav_menu_2() {
 	register_nav_menu( 'header_menu', 'header_menu' );
 }
 
+
 add_action( 'ava_after_main_container', 'users_primary_menu' );
 
 function users_primary_menu() {
 
     echo '<div id="top-menu-custom" class="top-menu-custom">';
-    echo '<div id="beta" class="beta">beta start</div>';
+    echo '<div id="beta" class="beta">beta 0.0</div>';
     echo '<div id="search" class="search">';
     echo do_shortcode('[avia_search]');
-    echo '</div>';
+    echo '</div><div>';
 
 
-    wp_nav_menu( array(
-        'menu_class'=>'menu-abra',
-        'theme_location'=>'header_menu',
-        'after'=>''
-    ) );
 
-    echo '</div>
+
+
+    if ( is_user_logged_in() ) {
+        wp_nav_menu( array(
+            'menu_class'=>'menu-abra',
+            'theme_location'=>'header_menu',
+            'after'=>''
+        ) );
+
+        // echo do_shortcode('[uwp_user_avatar size="50" allow_change="1"]');
+
+    } else {
+        echo '<a href="https://dot-browser.space/realtor-say/login">Увійти</a>';
+    }
+
+    echo '</div></div>
     ';
 
 }
@@ -130,8 +141,6 @@ function my_plases_lable_rs_func(){
         'post_type'	=> 'gd_place',
         'meta_key'	=> 'author',
     ));
-
-
 
     echo $posts;
 
