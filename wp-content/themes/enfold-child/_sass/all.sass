@@ -215,14 +215,487 @@
           
 
 
+// #top.page-id-11
+//   .geodirectory-add-post
+
+.rs_wrapper_steps
+  margin: 0 20%
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  #geodir_fieldset_136,#geodir_fieldset_119,#geodir_fieldset_137,#geodir_fieldset_141
+    padding: 15px 40px 15px 5px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000
+    display: flex
+    align-items: center
+    // border-bottom: 4px solid transparent !important
+    border-bottom: 4px solid $accent-red !important 
+    small
+      display: none
+    &.class
+      border-bottom: 4px solid $accent-red !important
+    &::after
+      content: ''
+      display: block
+      width: 12.5px
+      height: 8px
+      margin-left: 9px
+      background: url(../img/svg/done__step.svg) no-repeat center center / contain
+
+.step_wrap
+  margin-top: 50px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  #go_step_2, #back_step_1, #go_step_3, #go_step_4, #back_step_2
+    padding: 12px 25px
+    color: #fff
+    background: $accent
+    font-weight: 1;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 12px
+    cursor: pointer
+    transition: $transition
+    &:hover
+      background: lighten($accent, 10%)
+  #go_step_2
+    margin-left: auto
+
+.rs_wrapper_1
+  margin: 0 20%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  #gd_placecategory_row, #gd_placecategory
+    width: 100% !important
+    display: flex
+    flex-direction: column
+    padding: 20px 0
+    *
+      float: none !important
+    label
+      font-size: 16px;
+      line-height: 18px;
+      color: $accent
+
+    .gd-parent-cats-list
+      padding: 0
+      margin-top: 18px
+      overflow: visible
+      display: flex
+      justify-content: start
+      transition: $transition
+      
+      > span
+        width: 31%
+        margin-right: auto
+        padding: 20px 16px
+        display: flex !important
+        align-items: center
+        justify-content: center
+        box-shadow: 0px 4px 10px rgba(145, 145, 145, 0.25);
+        border-radius: 15px
+        position: relative
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 17px;
+        color: #6C6C6C
+        &:last-child
+          margin-right: 0
+        input
+          width: 100%
+          height: 100%
+          position: absolute
+          opacity: 0
+        > span
+          display: none !important
+        &::before
+          position: absolute
+          top: 50%
+          left: 18px
+          content: ''
+          display: block
+          width: 20px
+          height: 20px
+          transform: translateY(-50%)
+          background: url(../img/svg/uncheck.svg) no-repeat center center / contain
+        &.gd-term-checked
+          font-weight: 1;
+          font-size: 15px;
+          line-height: 18px;
+          color: #000
+          &::before
+            background: url(../img/svg/check.svg) no-repeat center center / contain
+        &:hover
+          &::before
+            background: url(../img/svg/check.svg) no-repeat center center / contain
+
+  .geodir-fieldset-row, #post_title_row, .step_wrap
+    width: 100%
+
+  
+
+  #property_type_row,#type_of_bilding_row,#plane_field_custom_row,#property_bedrooms_row,#floor_field_custom_row,#number_floors_field_custom_row,#property_area_3_row,#property_area_row,#kitchen_area_field_custom_row
+    // max-width: 31%
+    width: 30%
+    margin-top: 30px
+    .geodir_message_note
+      display: none
+
+    label
+      float: none
+      width: auto
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px
+      color: $accent
+      margin-bottom: 20px
+
+    input
+        display: flex
+        align-items: center
+        width: 100% !important
+        margin: 18px auto 0 0
+        background: #ccc !important
+        color: $accent !important
+        border-radius: 10px
+        padding: 14px 20px
+        height: 45px !important
+    
+    .select2
+      width: 100% !important
+      margin: 18px auto 0 0
+      .select2-selection
+        // background: #fff
+        display: flex
+        align-items: center
+        background: #ccc
+        border-radius: 10px
+        padding: 14px 20px
+
+        height: 45px !important
+      .select2-selection__rendered
+        line-height: 1
+        height: auto
+        width: 100%
+        .select2-selection__clear
+          margin: 0 10% 0 auto
+      &::after
+        content: ''
+        display: block
+        width: 13px
+        height: 13px
+        position: absolute
+        top: 50%
+        right: 16px
+        transform: translateY(-50%)
+        background: url(../img/svg/arrow_bottom.svg) no-repeat center center / contain 
 
 
 
 
 
+  #plane_field_custom_row,#number_floors_field_custom_row,#kitchen_area_field_custom_row
+    margin-right: 0
+
+
+.rs_wrapper_2
+  margin: 0 20%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  #geodir_fieldset_119
+    width: 100%
+
+  #wall_material_field_custom_row,#ceiling_height_row,#property_furnishing_row
+    width: 30%
+    margin-top: 30px
+
+
+    textarea
+      background: #ccc
+      font-size: 16px
+      line-height: 18px
+      border-radius: 10px
+      color: $accent
+      padding: 14px 20px
+      height: 45px
+      display: flex
+      align-items: center
+      margin: 18px auto 0 0
+      min-height: 0
+      overflow: hidden
+
+    label
+      float: none
+      width: auto
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px
+      color: $accent
+      margin-bottom: 20px
+
+    input
+      display: flex
+      align-items: center
+      width: 100% !important
+      margin: 18px auto 0 0
+      background: #ccc !important
+      color: $accent !important
+      border-radius: 10px
+      padding: 14px 20px
+      height: 45px !important
+    
+    .select2
+      width: 100% !important
+      margin: 18px auto 0 0
+      .select2-selection
+        // background: #fff
+        display: flex
+        align-items: center
+        background: #ccc
+        border-radius: 10px
+        padding: 14px 20px
+
+        height: 45px !important
+      .select2-selection__rendered
+        line-height: 1
+        height: auto
+        width: 100%
+        .select2-selection__clear
+          margin: 0 10% 0 auto
+      &::after
+        content: ''
+        display: block
+        width: 13px
+        height: 13px
+        position: absolute
+        top: 50%
+        right: 16px
+        transform: translateY(-50%)
+        background: url(../img/svg/arrow_bottom.svg) no-repeat center center / contain 
+
+  #property_features_row, #balkony_row, #repair_row, #property_bathrooms_row
+    width: 47%
+    display: flex
+    flex-direction: column
+    .select2, .geodir_multiselect_list
+      width: 100% !important
+      margin: 18px auto 0 0
+      .select2-selection
+        // background: #fff
+        display: flex
+        align-items: center
+        background: #ccc
+        border-radius: 10px
+        padding: 14px 20px
+
+        height: 45px !important
+        .select2-selection__rendered
+          line-height: 1
+          width: 100%
+          height: 100%
+          .select2-selection__clear
+            margin: 0 10% 0 auto
+
+          .select2-search 
+            float: none;
+            width: 100%;
+            height: 100%;
+            input
+              width: 100%;
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              background: transparent
+        &::after
+          content: ''
+          display: block
+          width: 13px
+          height: 13px
+          position: absolute
+          top: 50%
+          right: 16px
+          transform: translateY(-50%)
+          background: url(../img/svg/arrow_bottom.svg) no-repeat center center / contain 
+
+  #amenities_row, #household_appliances_row, #multimedia_row, #communications_row
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    label
+      float: none
+      width: auto
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px
+      color: $accent
+      margin-bottom: 20px
+
+    ul.gd_multi_choice 
+      padding: 0;
+      margin: 20px 0;
+      max-height: none;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      overflow-y: auto;
+      li
+        margin: 0 10px 20px 0;
+        padding: 7px 9px
+        background: #E3E3E3;
+        border-radius: 5px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        position: relative
+        border: solid 1px transparent !important
+        input 
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          left: 0;
+          margin: 0;
+        &.checked
+          background: #FEEAE5
+          border: 1px solid $accent-red !important
+          color: $accent-red
+
+
+.rs_wrapper_3
+  margin: 0 20%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  #geodir_address_street_row, #geodir_address_map_row
+    order: -1
+
+  #geodir_address_street_row,#geodir_address_neighbourhood_row,#geodir_address_map_row,#post_content_row,#post_images_row
+    width: 100%;
+    display: flex;
+    flex-direction: column
+
+    .geodir-add-files
+      padding: 55px
+      background: #ccc
+      border: dashed 3px #000 !important
+      #post_imagesplupload-browse-button
+        background: $accent-red
+        border-radius: 10px
+      .geodir_form_row
+        padding: 0;
+        margin: 0;
+        
+    
+    textarea
+      background: #ccc
+      font-size: 16px
+      line-height: 18px
+      border-radius: 10px
+      color: $accent
+      padding: 14px 20px
+      height: 45px
+      display: flex
+      align-items: center
+      margin: 18px auto 0 0
+      min-height: 0
+      overflow: hidden
+
+    label
+      float: none
+      width: auto
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px
+      color: $accent
+      margin-bottom: 20px
+
+    .gd-input-group 
+      height: 45px
+      border-radius: 10px
+      background: #ccc;
+      border: none !important;
+      input
+        width: 100%;
+        margin: 0;
+        padding: 14px 20px;
+        height: 100%;
+        background: transparent
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 17px;
+
+        
+    .select2
+      width: 100% !important
+      margin: 18px auto 0 0
+      .select2-selection
+        // background: #fff
+        display: flex
+        align-items: center
+        background: #ccc
+        border-radius: 10px
+        padding: 14px 20px
+
+        height: 45px !important
+        .select2-selection__rendered
+          line-height: 1
+          height: auto
+          width: 100%
+          .select2-selection__clear
+            margin: 0 10% 0 auto
+      &::after
+        content: ''
+        display: block
+        width: 13px
+        height: 13px
+        position: absolute
+        top: 50%
+        right: 16px
+        transform: translateY(-50%)
+        background: url(../img/svg/arrow_bottom.svg) no-repeat center center / contain 
 
 
 
+
+  #price_2_row,#price__commission_row
+    width: 47%
+    display: flex
+    flex-direction: column
+
+    
+    label
+      float: none
+      width: auto
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px
+      color: $accent
+      margin-bottom: 20px
+
+    input
+      display: flex
+      align-items: center
+      width: 100% !important
+      margin: 18px auto 0 0
+      background: #ccc !important
+      color: $accent !important
+      border-radius: 10px
+      padding: 14px 20px
+      height: 45px !important
+
+    
 
 
 

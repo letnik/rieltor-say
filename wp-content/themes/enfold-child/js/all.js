@@ -188,15 +188,27 @@ jQuery(document).ready(function () {
 // });
 
 
+
+
+jQuery(document).ready(function(){
+	jQuery('#geodir_fieldset_136,#geodir_fieldset_119,#geodir_fieldset_137,#geodir_fieldset_141').wrapAll('<div class="rs_wrapper_steps"></div>');	
+
+	setTimeout(jQuery('.rs_wrapper_steps').wrapAll('<div id="steps" class="steps"></div>'), 1);
+
+
+
+});
+
+
 // step_1
 
 
 jQuery(document).ready(function(){
-	jQuery('#geodir_fieldset_136,#gd_placecategory_row,#property_type_row,#post_title_row,#type_of_bilding_row,#plane_field_custom_row,#property_bedrooms_row,#floor_field_custom_row,#number_floors_field_custom_row,#property_area_3_row,#property_area_row,#kitchen_area_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
+	jQuery('#gd_placecategory_row,#property_type_row,#post_title_row,#type_of_bilding_row,#plane_field_custom_row,#property_bedrooms_row,#floor_field_custom_row,#number_floors_field_custom_row,#property_area_3_row,#property_area_row,#kitchen_area_field_custom_row').wrapAll('<div class="rs_wrapper_1"></div>');	
 
 	setTimeout(jQuery('.rs_wrapper_1').wrapAll('<div id="step_1" class="step_1"></div>'), 1);
 
-	jQuery(".rs_wrapper_1").append("<div id='go_step_2'>Крок 2</div>");
+	jQuery(".rs_wrapper_1").append("<div class='step_wrap'><div id='go_step_2'>Крок 2</div></div>");
 
 });
 
@@ -230,13 +242,15 @@ jQuery(document).ready(function(){
 
 jQuery(document).ready(function(){
 
-	jQuery('#geodir_fieldset_119,#wall_material_field_custom_row,#ceiling_height_row,#balkony_row,#property_features_row,#property_furnishing_row,#repair_row,#property_bathrooms_row,#amenities_row,#household_appliances_row,#multimedia_row,#communications_row').wrapAll('<div class="rs_wrapper_2"></div>');	
+	jQuery('#wall_material_field_custom_row,#ceiling_height_row,#balkony_row,#property_features_row,#property_furnishing_row,#repair_row,#property_bathrooms_row,#amenities_row,#household_appliances_row,#multimedia_row,#communications_row').wrapAll('<div class="rs_wrapper_2"></div>');	
 
 	setTimeout(jQuery('.rs_wrapper_2').wrapAll('<div id="step_2" class="step_2"></div>'), 1);
 
-	jQuery(".rs_wrapper_2").append("<div id='go_step_3'>Крок 3</div>");
+	jQuery(".rs_wrapper_2").append("<div class='step_wrap'><div id='back_step_1'>Назад</div><div id='go_step_3'>Крок 3</div></div>");
 
-	jQuery(".rs_wrapper_2").append("<div id='back_step_1'>Назад</div>");
+	// jQuery(".rs_wrapper_2").append("<div class='step_wrap'><div id='go_step_3'>Крок 3</div></div>");
+
+
 
 });
 
@@ -259,14 +273,16 @@ jQuery(document).ready(function(){
 
 });
 
+// ,#geodir_address_country_row
+
 jQuery(document).ready(function(){
-	jQuery('#geodir_fieldset_137,#post_images_row,#price__commission_row,#price_2_row,#post_content_row,#geodir_address_mapview_row,#geodir_address_longitude_row,#geodir_address_latitude_row,#geodir_address_map_row,#geodir_address_neighbourhood_row,#geodir_address_city_row,#geodir_address_region_row,#geodir_address_country_row,#geodir_address_street_row').wrapAll('<div class="rs_wrapper_3"></div>');	
+	jQuery('#post_images_row,#price__commission_row,#price_2_row,#post_content_row,#geodir_address_mapview_row,#geodir_address_longitude_row,#geodir_address_latitude_row,#geodir_address_map_row,#geodir_address_neighbourhood_row,#geodir_address_city_row,#geodir_address_region_row,#geodir_address_street_row').wrapAll('<div class="rs_wrapper_3"></div>');	
 
 	setTimeout(jQuery('.rs_wrapper_3').wrapAll('<div id="step_3" class="step_3"></div>'), 1);
 
-	jQuery(".rs_wrapper_3").append("<div id='go_step_4'>Крок 4</div>");
+	jQuery(".rs_wrapper_3").append("<div class='step_wrap'><div id='back_step_2'>Назад</div><div id='go_step_4'>Крок 4</div></div>");
 
-	jQuery(".rs_wrapper_3").append("<div id='back_step_2'>Назад</div>");
+	// jQuery(".rs_wrapper_3").append("<div class='step_wrap'><div id='back_step_2'>Назад</div></div>");
 });
 
 jQuery(document).ready(function(){
@@ -289,11 +305,11 @@ jQuery(document).ready(function(){
 
 
 jQuery(document).ready(function(){
-	jQuery('#geodir_fieldset_141,#to_whom_they_offer_row,#post_tags_row,#expire_date_row,#business_hours_row,#geodir-add-listing-submit').wrapAll('<div class="rs_wrapper_4"></div>');	
+	jQuery('#to_whom_they_offer_row,#post_tags_row,#expire_date_row,#business_hours_row,#geodir-add-listing-submit').wrapAll('<div class="rs_wrapper_4"></div>');	
 
 	setTimeout(jQuery('.rs_wrapper_4').wrapAll('<div id="step_4" class="step_4"></div>'), 1);
 
-	jQuery(".rs_wrapper_4").append("<div id='back_step_3'>Назад</div>");
+	jQuery(".rs_wrapper_4").append("<div class='step_wrap'><div id='back_step_3'>Назад</div></div>");
 	
 	// jQuery(".rs_wrapper_4").append("<div>Готово</div>");
 });
@@ -323,3 +339,41 @@ jQuery(document).ready(function(){
 	var elemCount = jQuery('.sticker-tabs ul.geodir-gallery.geodir-images li').length;
 	jQuery('.sticker-tabs ul.geodir-gallery.geodir-images li:nth-child(4) a').attr( 'attributeCountLi', elemCount );
 }); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jQuery(document).ready(function () {
+
+	jQuery('#geodirectory-add-post .gd_multi_choice li input').each(function () {
+		if (jQuery(this).prop('checked')) {
+			jQuery(this).parent().addClass( "checked" );
+
+		} 
+		else {
+			jQuery(this).parent().removeClass( "checked" );
+
+		}
+	});
+
+	jQuery("#geodirectory-add-post .gd_multi_choice li input").change(function () {
+		jQuery(this).parent().toggleClass('checked');
+
+	});
+	
+});
