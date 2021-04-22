@@ -77,8 +77,31 @@ function users_primary_menu() {
 
         // echo do_shortcode('[uwp_user_avatar size="50" allow_change="1"]');
 
-    } else {
-        echo '<a href="https://dot-browser.space/realtor-say/login">Увійти</a>';
+    } 
+    else {
+
+        echo '
+
+            <div class="unloged_user_menu_wrap">
+                <div class="add_listing_button_holder">
+                    <a class="button" href="http://realtor-say/dodati-ogoloshennya-po-kategoriyam/">Додати оголошення</a>
+                </div>
+                <div class="user_unloged_item">
+                    <div class="user_wrap">
+                        <img src="#" alt="#">
+                        <p>авторизуватись</p>
+                    </div>
+                    <ul class="un_log_list">
+                        <li class="list_it">
+                            <a href="//realtor-say/register/" class="button">Зареєструватись</a>
+                        </li>
+                        <li class="list_it">
+                            <a class="button" href="//realtor-say/login/">Увійти</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        ';
     }
 
     echo '</div></div>
