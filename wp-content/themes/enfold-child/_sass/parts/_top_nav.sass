@@ -6,11 +6,12 @@
   background: #c8c8c8
 
 
-  .unloged_user_menu_wrap
+  .user_menu_wrap
     display: flex
     align-items: center
     padding: 0 10px
     // justify-content: space-between
+
     .add_listing_button_holder
       display: flex
       align-items: center
@@ -31,15 +32,32 @@
         align-items: center;
         border-radius: 8px;
         outline: 0;
-    .user_unloged_item
+    .user_item
       position: relative !important 
       transition: $transition
       z-index: 101
       .user_wrap
         display: flex
         align-items: center
+        img
+          margin-right: 10px
+        .card 
+          margin-right: 10px
+          .card-body
+            .row
+              margin-bottom: 0
+              .col  
+                a 
+                  width: 40px
+                  height: 40px
+                  display: block
+                  overflow: hidden
+                  border: solid 2px #fff !important
+                  border-radius: 50%
+                  img
+                    object-fit: cover
         
-      .un_log_list
+      .log_list
         margin: 0
         background: #c8c8c8
         opacity: 0
@@ -60,7 +78,7 @@
               color: lighten($accent, 15%)
             
       &:hover
-        .un_log_list
+        .log_list
           opacity: 1
 
     

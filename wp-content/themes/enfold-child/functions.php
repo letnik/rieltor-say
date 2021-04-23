@@ -69,34 +69,66 @@ function users_primary_menu() {
 
 
     if ( is_user_logged_in() ) {
-        wp_nav_menu( array(
-            'menu_class'=>'menu-abra',
-            'theme_location'=>'header_menu',
-            'after'=>''
-        ) );
+        // wp_nav_menu( array(
+        //     'menu_class'=>'menu-abra',
+        //     'theme_location'=>'header_menu',
+        //     'after'=>''
+        // ) );
 
-        // echo do_shortcode('[uwp_user_avatar size="50" allow_change="1"]');
+        echo '
+
+            <div class="user_menu_wrap">
+                <div class="add_listing_button_holder">
+                    <a class="button" href="' . get_home_url() . '/dodati-ogoloshennya-po-kategoriyam/">Додати оголошення</a>
+                </div>
+                <div class="user_item">
+                    <div class="user_wrap">
+        ';
+            echo do_shortcode('[uwp_user_avatar link="1"]');
+
+            echo '<p>';
+            echo do_shortcode('[uwp_user_meta key="first_name" show="value"] [uwp_user_meta key="last_name" show="value"]');
+            
+            echo '</p>';
+            echo '</div>';
+            echo '       
+                    <ul class="log_list">
+                        <li class="list_it">
+                            <a href="' . get_home_url() . '/profile/admin/" class="button">Мій профіль</a>
+                        </li>
+                        <li class="list_it">
+                            <a class="button" href="' . get_home_url() . '/account/">Акаунт</a>
+                        </li>
+                        <li class="list_it">
+                            <a class="button" href="' . get_home_url() . '/moyi-ogoloshennya/">Мої оголошення</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    ';
+
+        // echo do_shortcode('[uwp_user_avatar link="1"][uwp_user_meta key="first_name" show="value"] [uwp_user_meta key="last_name" show="value"][uwp_user_title tag="span"]');
 
     } 
     else {
 
         echo '
 
-            <div class="unloged_user_menu_wrap">
+            <div class="user_menu_wrap">
                 <div class="add_listing_button_holder">
-                    <a class="button" href="http://realtor-say/dodati-ogoloshennya-po-kategoriyam/">Додати оголошення</a>
+                    <a class="button" href="' . get_home_url() . '/dodati-ogoloshennya-po-kategoriyam/">Додати оголошення</a>
                 </div>
-                <div class="user_unloged_item">
+                <div class="user_item">
                     <div class="user_wrap">
-                        <img src="#" alt="#">
+                        <img src="' .  get_stylesheet_directory_uri() . '/img/user.svg" alt="#">
                         <p>авторизуватись</p>
                     </div>
-                    <ul class="un_log_list">
+                    <ul class="log_list">
                         <li class="list_it">
-                            <a href="//realtor-say/register/" class="button">Зареєструватись</a>
+                            <a href="' . get_home_url() . '/register/" class="button">Зареєструватись</a>
                         </li>
                         <li class="list_it">
-                            <a class="button" href="//realtor-say/login/">Увійти</a>
+                            <a class="button" href="' . get_home_url() . '/login/">Увійти</a>
                         </li>
                     </ul>
                 </div>

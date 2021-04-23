@@ -70,6 +70,30 @@
       display: flex
       flex-direction: column
       justify-content: space-between
+      .spu-open-666
+        padding: 15px
+        text-align: center
+        transition: $transition
+        font-weight: 1;
+        font-size: 16px;
+        line-height: 19px;
+        color: $accent
+        position: relative
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          width: 45px
+          height: 45px
+          top: -100%
+          left: 50%
+          transform: translateX(-50%)
+          background: url(../img/svg/location.svg) no-repeat center center / contain
+        &:hover
+          color: lighten($accent, 10%)
+          // &::before
+          //   background: url(../img/svg/location-fill.svg) no-repeat center center / contain       
+
       nav.main_menu
         height: min-content
         margin-bottom: auto
