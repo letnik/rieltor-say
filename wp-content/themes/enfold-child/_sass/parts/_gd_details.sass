@@ -96,6 +96,7 @@
                   transition: $transition
                   display: flex
                   align-items: center
+                  justify-content: center
                   i
                     margin-right: 10px
                   &:hover              
@@ -106,13 +107,28 @@
                     &:hover
                       background: $accent
                       color: #fff
-                  &.mail
+                  &.geodir-ninja-forms-link
                     color: #fff
                     background: $accent
                     margin-top: 15px
+
                     &:hover
                       background: #fff
                       color: $accent
+                      &::before
+                        filter: invert(1)
+                    &::before
+                      content: '';
+                      display: block;
+                      width: 25px
+                      height: 25px
+
+                      margin-right: 10px
+                      top: 0;
+                      right: 0; 
+                      background: url(../img/svg/mail_fill.svg) center center/contain no-repeat
+           
+                        
 
 
 

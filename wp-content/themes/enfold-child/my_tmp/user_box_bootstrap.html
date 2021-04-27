@@ -7,7 +7,8 @@
       <div class="user_bio">
         <div class="about_user">
           <h3 class="name"><a href="[#author_link#]">[#author_name#]</a></h3>
-          <p class="role">!!user_role!![#user_role#]</p>
+          <p class="role">[get_current_user]</p>
+!!user_role!![gd_post_content key="user_role" show="icon-label-value"] / [uwp_user_meta key="user_role"] / [#user_role#]
         </div>
         <div class="raiting_wrap">
           <div class="raiting_wrap_inner d-flex">
@@ -23,23 +24,21 @@
     </div>
     <div class="user_contact">
       <div class="user_contact_item">
-        <div class="usesr_phones">
-          <p><a href="tel:[#_1#]">[#_1#]</a></p>
-          <p><a href="tel:[#_2#]">[#_2#]</a></p>
-          <p><a href="tel:[#_3#]">[#_3#]</a></p>
-        </div>
-        <button class="btn">Показати номер</button>
+        <ul class="usesr_phones">
+          <li><a href="tel:[#_1#]">[#_1#]</a></li>
+          <li><a href="tel:[#_2#]">[#_2#]</a></li>
+          <li><a href="tel:[#_3#]">[#_3#]</a></li>
+        </ul>
+        <button class="btn phones"><i class="icon-rs icon-phone"></i>Показати номер</button>
       </div>
       <div class="user_contact_item">
-        <div class="mail_link">
-          <p class="mail_link_item"><a href="[#email#]">[#email#]</a></p>
-        </div>
-        <button class="btn">Написати мені</button>
+        <button class="btn mail"><i class="icon-rs icon-mail_fill"></i>Написати мені</button>
       </div>
     </div>
   </div>
 </div>
 
+[gd_ninja_forms form_id="1" text="Contact form" output="button"]
 
 <i class="icon-rs icon-phone icon-mail_fill"></i>
 
