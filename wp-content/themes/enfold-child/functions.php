@@ -59,7 +59,7 @@ add_action( 'ava_after_main_container', 'users_primary_menu' );
 function users_primary_menu() {
 
     echo '<div id="top-menu-custom" class="top-menu-custom">';
-    echo '<div id="beta" class="beta">beta 0.0</div>';
+    echo '<div id="beta" class="beta">beta 1.0</div>';
     echo '<div id="search" class="search">';
     echo do_shortcode('[avia_search]');
     echo '</div><div>';
@@ -75,7 +75,8 @@ function users_primary_menu() {
             'after'=>''
         ) );
 
-        // echo do_shortcode('[uwp_user_avatar size="50" allow_change="1"]');
+        echo do_shortcode('[uwp_user_avatar size="50" allow_change="1"]');
+        echo do_shortcode('[uwp_user_title tag="span"]]');
 
     } else {
         echo '<a href="https://dot-browser.space/realtor-say/login">Увійти</a>';
@@ -217,22 +218,25 @@ function show_svg_in_media_library( $response ) {
 
 
 include_once("includes/my_shortcodes.php");
+include_once("includes/detect_author.php");
 
 
 
+function get_user_role($id)
+{
+    $user = new WP_User($id);
+    return array_shift($user->roles);
+}
 
 
+add_shortcode( 'get_current_user', 'function_current_user' );
 
+function function_current_user(){
 
-// add_shortcode('avia_search', 'avia_change_schema_attributes');
+    $post = get_post();
+    $id = $post->ID;
 
-// add_filter('avf_markup_helper_attributes','avia_change_schema_attributes', 10, 2);
-// function avia_change_schema_attributes($attributes, $args)
-// {
-// 	if($args['context'] == 'phone')
-// 	{
-// 		unset($attributes);
-// 	}
+    $aid = $post->post_author;
+    echo '<span>' . get_user_role($aid) . '</span>';
 
-// 	return $attributes;
-// }
+}
