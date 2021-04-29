@@ -259,16 +259,15 @@
                     border-bottom: 2px solid #C4C4C4 !important
                     margin-bottom: 18px
                     .tab    
-                        height: 40px
                         margin-right: 5px
                         font-size: 18px
                         line-height: 21px
                         align-items: center;
-                        padding: 11px 
+                        padding: 18px 25px
                         outline: none
                         color: $text-grey
                         background: none
-                        width: 110px
+                        // width: 110px
                         display: flex
                         align-items: center
                         justify-content: center
@@ -315,17 +314,51 @@
         &.home
             .main_color .custom-tabs-form 
                 .tab_titles
+                    border-bottom:  none !important
+                    margin-bottom: 0
                     .tab
+                        margin-right: 0
+                        background: #000
+                        color: $decoreted_text
+                        font-size: 18px
+                        line-height: 21px
+                        align-items: center;
+                        padding: 20px 25px
+                        outline: none
+                        color: $text-grey
+                        background: none
+                        width: 110px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        transition: $transition
+                        border-bottom: none !important
                         background: #000
                         color: $decoreted_text
                         &.active_tab
+                            font-style: normal;
+                            font-size: 20px;
+                            line-height: 21px;
                             background: #F0F0F0
                             color: $accent
                         &:first-child
                             border-radius: 10px 0 0 0
                         &:last-child
                             border-radius: 0 10px 0 0
-                            
+                        .tab_icon
+                            display: none                        
+                        &:hover
+                            font-style: normal;
+                            font-size: 20px;
+                            line-height: 21px;
+                            color: $accent
+                            background: #F0F0F0
+
+                .tabcontainer 
+
+                    .active_tab_content, .tab_content
+                        border-radius: 0 10px 10px
+                                    
                             
 
 
